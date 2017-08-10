@@ -1,0 +1,273 @@
+body {
+  font-family: sans-serif;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+}
+
+section {
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+section p {
+  font-size: 25px;
+}
+
+h1 {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 150px;
+  margin: 30px auto;
+}
+
+h2 {
+  color: #005005;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 50px;
+}
+
+#rescue-nav a,
+#rescue-nav a:visited,
+#rescue-nav a:focus {
+  color: white;
+}
+
+#rescue-nav a:hover {
+  text-decoration: underline;
+}
+
+#rescue-nav {
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'Caveat Brush', cursive;
+  opacity: 0;
+  transition: all 1s;
+}
+
+#logo, #rescue-nav {
+  font-size: 35px;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  background-image: url('../images/friends.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.intro > div {
+  background: rgba(0, 80, 5, .8);
+  color: white;
+  padding: 200px 10% 20px 10%;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.intro > div > div {
+  background: #60ad5e;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 50px auto 0 auto;
+}
+
+.intro > div a, footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+#shelter-search {
+  border: none;
+  color: black;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 10px 10px;
+  width: 170px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#shelter-searchgo {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+#shelter-search:focus {
+  outline: none;
+}
+
+#adoption {
+  height: auto;
+}
+
+#adoption h2 {
+  text-align: left;
+}
+
+#shelters, #action-call {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.shelter {
+  border: 2px solid #2e7d32;
+  color: black;
+  cursor: pointer;
+  height: auto;
+  padding: 5px;
+  position: relative;
+  margin: 5px auto;
+  text-align: center;
+  transition: all .1s;
+  width: 300px;
+}
+
+.shelter:last-of-type {
+  margin-bottom: 20px;
+}
+
+.shelter:hover {
+  box-shadow: 2px 2px 3px grey;
+  transform: scale(1.03);
+}
+
+.shelter > div {
+  background: #60ad5e;
+  bottom: 0;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -5px;
+  position: absolute;
+  width: 100%;
+}
+
+.shelter h4 {
+  margin-bottom: 40px;
+}
+
+.shelter-detail {
+  border-radius: 5px;
+  color: black;
+  height: auto;
+  padding: 5px;
+  margin: 5px auto;
+  text-align: left;
+  width: 80%;
+}
+
+.shelter-header {
+  border: 4px solid #005005;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 5px auto;
+  width: 95%;
+}
+
+.shelter-header > div {
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.shelter-name {
+  text-align: center;
+}
+
+#mission {
+  border-top: 1px solid #005005;
+  border-bottom: 1px solid #005005;
+}
+
+#mission > div {
+  height: auto;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#mission i {
+  color: #005005;
+}
+
+#action-call > div {
+  width: 400px;
+  height: auto;
+  margin: 20px auto;
+  padding: 5px 20px;
+}
+
+.learn-more {
+  background: #60ad5e;
+  color: white;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px auto;
+  width: 150px;
+}
+
+footer {
+  background: #005005;
+  color: white;
+}
+
+footer > div {
+  padding: 10px 10px;
+  height: 300px;
+}
+
+footer p {
+  padding: 0px 0px 0px 10px;
+}
+
+@media screen and (max-width: 437px) {
+
+  #rescue-nav {
+    background-color: #005005;
+  }
+
+  .intro > div {
+    padding-top: 100px;
+  }
+
+  .intro > div p {
+    font-size: 15px;
+  }
+
+  #shelter-search {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 616px) {
+
+  .intro > div > div {
+    width: 90%;
+    height: auto;
+  }
+
+  .shelter {
+    width: 90%;
+  }
+}
