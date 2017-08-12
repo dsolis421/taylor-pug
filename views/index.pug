@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  section.intro
+    div
+      h1 totes pets
+      p All About the pets
+      div
+        span Find A Shelter
+        input#shelter-search(type="number" placeholder="Zip Code")
+        i#shelter-searchgo.fa.fa-search
+      span Powered by 
+        a(href="https://www.petfinder.com" target="_blank") Petfinder
+  section#adoption
+    div
+      span#search-status
+    #shelters

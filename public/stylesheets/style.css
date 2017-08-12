@@ -64,12 +64,15 @@ h2 {
   background-size: cover;
 }
 
-.intro > div {
+.intro > div, #adoption-header {
   background: rgba(0, 80, 5, .8);
   color: white;
   padding: 200px 10% 20px 10%;
-  opacity: 0;
   transition: all 1s;
+}
+
+.intro > div {
+  opacity: 0;
 }
 
 .intro > div > div {

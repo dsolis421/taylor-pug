@@ -11,7 +11,7 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-      nav.navbar.navbar-default.navbar-fixed-top#rescue-nav(role="navigation")
+      nav(role="navigation").navbar.navbar-default.navbar-fixed-top#rescue-nav
         .container
           .navbar-header
             button(type="button" data-toggle="collapse" data-target="#rescue-navbar-collapse").navbar-toggle.collapsed
@@ -23,22 +23,38 @@ html
               li
                 a.rescue-menu(href="/adoption") Adoption
               li
-                a.rescue-menu(href="/donation") Donation
+                a.rescue-menu(href="/users") Donation
               li
                 a.rescue-menu(href="/foster") Foster
               li
                 a.rescue-menu(href="#contact") Contact
-    section.intro
-      div
-        h1 totes pets
-        p All About the pets
-        div
-          span Find A Shelter
-          input#shelter-search(type="number" placeholder="Zip Code")
-          i#shelter-search-go.fa.fa-search
-        span Powered by 
-          a(href="https://www.petfinder.com" target="_blank") Petfinder
     block content
+    section#mission
+      div
+        h2 our mission is simple
+        i.fa.fa-paw.fa-2x
+        p Help find loving, forever homes for surrendered and rescued animals.
+        i.fa.fa-paw.fa-2x
+        p Promote safe and responsible pet ownership.
+    section#action-call
+      div
+        h2 adopt
+        p 
+          |Hundreds of sheltered pets are waiting to come home to a loving family. Are you new to pet adoption?
+          | Know what to expect and how to find the ideal pet for your living situation.
+        .learn-more Learn More
+      div
+        h2 donate
+        p 
+          |Many rescue organizations are funded by donations from generous people, just like you. These donations
+          |arent just financial and can include food, blankets, and toys.
+        .learn-more Learn More
+      div
+        h2 foster
+        p 
+          |Fostering can be a great way to help a rescued pet transition to a forever home. It also helps shelters
+          |maintain available space for new arrivals.
+        .learn-more Learn More
     footer#contact.row
       #social.col-xs-6.col-sm-3
         h4 Follow Us
