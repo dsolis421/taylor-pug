@@ -57,25 +57,29 @@ h2 {
   padding: 0;
 }
 
-.intro {
+#intro {
   background-image: url('../images/friends.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 
-.intro > div, #adoption-header {
+.header {
   background: rgba(0, 80, 5, .8);
   color: white;
   padding: 200px 10% 20px 10%;
   transition: all 1s;
 }
 
-.intro > div {
+.error-stack {
+  text-align: left;
+}
+
+#intro > div {
   opacity: 0;
 }
 
-.intro > div > div {
+#adoption-header > div {
   background: #60ad5e;
   width: 400px;
   height: 50px;
@@ -84,7 +88,7 @@ h2 {
   margin: 50px auto 0 auto;
 }
 
-.intro > div a, footer a {
+#adoption-header a, footer a {
   color: inherit;
   text-decoration: underline;
 }

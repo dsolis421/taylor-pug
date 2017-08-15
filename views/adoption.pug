@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  section#adoption-header
-    h3 Here's where we'll talk about adopting pets.
+  section.header#adoption-header
+    h1 adoption
+    div
+      span Find A Shelter
+      input#shelter-search(type="number" placeholder="Zip Code")
+      i#shelter-searchgo.fa.fa-search
+    span Powered by 
+      a(href="https://www.petfinder.com" target="_blank") Petfinder
+  section#adoption
+    div
+      span#search-status
+    #shelters
