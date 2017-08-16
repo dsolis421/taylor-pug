@@ -1,12 +1,21 @@
 #!/usr/bin/env node
-
 /**
  * Module dependencies.
  */
-
+import mongoose from 'mongoose';
+require('dotenv').config();
 var app = require('../app');
 var debug = require('debug')('totes:server');
 var http = require('http');
+
+/* mongoose connect*/
+mongoose.connect(process.env.DATABASE, { useMongoClient: true });
+mongoose.Promise = global.Promise;
+mongoose.connection.on('error', err => {
+  console.error('Mongoose failed to connect to db --> ' + err);
+});
+/*models*/
+require('../models/breeds');
 
 /**
  * Get port from environment and store in Express.
