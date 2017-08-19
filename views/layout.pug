@@ -7,7 +7,7 @@ html
     title= title
     link(rel="stylesheet", href="/stylesheets/css-reset.css")
     link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
-    link(href="https://fonts.googleapis.com/css?family=Caveat+Brush", rel="stylesheet")  
+    link(href="https://fonts.googleapis.com/css?family=Caveat+Brush|Martel+Sans", rel="stylesheet")  
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
@@ -23,11 +23,7 @@ html
               li
                 a.rescue-menu(href="/adoption") Adoption
               li
-                a.rescue-menu(href="/users") Donation
-              li
                 a.rescue-menu(href="/foster") Foster
-              li
-                a.rescue-menu(href="#contact") Contact
     block content
     
     footer#contact.row
@@ -39,7 +35,7 @@ html
         p Instagram
       #partner.col-xs-6.col-sm-3
         h4 Partner with us
-        p Rescue Groups
+        a(href="/rescuepartner") Rescue Groups
         p Veterinarians
         p Pet Services
       #contact-us.col-xs-6.col-sm-3

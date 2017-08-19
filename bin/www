@@ -16,6 +16,7 @@ mongoose.connection.on('error', err => {
 });
 /*models*/
 require('../models/breeds');
+require('../models/quotes');
 
 /**
  * Get port from environment and store in Express.
