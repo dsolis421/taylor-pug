@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+const router = express.Router();
+const totesController = require('../controllers/totesController');
 
 /* GET home page. */
-router.get('/', (req, res, next) => {
-  res.render('index', { title: 'totes pets' });
-});
+router.get('/', totesController.getHomePage);
+/*GET adoption page*/
+router.get('/adoption', totesController.getAdoption);
+/*Get foster page*/
+router.get('/foster', totesController.getFoster);
+/*Get rescue partners page*/
+router.get('/rescuepartner', totesController.getRescuePartners);
 
 module.exports = router;

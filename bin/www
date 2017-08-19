@@ -14,9 +14,6 @@ mongoose.Promise = global.Promise;
 mongoose.connection.on('error', err => {
   console.error('Mongoose failed to connect to db --> ' + err);
 });
-/*models*/
-require('../models/breeds');
-require('../models/quotes');
 
 /**
  * Get port from environment and store in Express.
