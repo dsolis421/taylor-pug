@@ -14,6 +14,6 @@ block content
       span#search-status
     #shelters
   section#testimonials
-    p.quote #{testmnl.quote}
-    span.author #{testmnl.author}
-    a(href="#") Read More 
+    q.quote= testmnl[0].quote
+    span.author= " - " + testmnl[0].author
+    a(href="#") Read More

@@ -8,7 +8,10 @@ exports.getHomePage = (req, res) => {
 
 exports.getAdoption = (req, res, next) => {
   quotes.find({author: 'Danny S'}).exec()
-  .then(testmnl => res.render('adoption', { title: 'adoption | totes pets', testmnl}))
+  .then(testmnl => {
+    console.log(testmnl);
+    res.render('adoption', { title: 'adoption | totes pets', testmnl})
+  })
   .catch(err => next(err));
 }
 
