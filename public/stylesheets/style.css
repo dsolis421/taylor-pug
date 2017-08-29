@@ -13,7 +13,7 @@ section {
   width: 100%;
 }
 
-section p {
+section p, section q, section span {
   font-size: 25px;
 }
 
@@ -231,6 +231,23 @@ input[type=number]::-webkit-outer-spin-button {
   line-height: 35px;
   margin: 10px auto;
   width: 150px;
+}
+
+#testimonials {
+  padding: 5% 20%;
+}
+
+#testimonials i, #testimonials p {
+  display: inline;
+}
+
+#testimonials i {
+  color: #005005;
+  margin-right: 20px;
+}
+
+#testimonials span, #testimonials a {
+  display: block;
 }
 
 footer {

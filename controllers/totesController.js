@@ -7,7 +7,8 @@ exports.getHomePage = (req, res) => {
 }
 
 exports.getAdoption = (req, res, next) => {
-  quotes.find({author: 'Danny S'}).exec()
+  //aggregate can get a random document from mongodb
+  quotes.aggregate({$sample: {size: 1}}).exec()
   .then(testmnl => {
     console.log(testmnl);
     res.render('adoption', { title: 'adoption | totes pets', testmnl})
