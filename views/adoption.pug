@@ -17,7 +17,7 @@ block content
     i.fa.fa-quote-left.fa-3x
     p.quote= testmnl[0].quote
     span.author= " - " + testmnl[0].author
-    a(href="#") Read More
+    a(href=`/testimonials/${testmnl[0]._id}`) Read More
 
 block scripts
   script(src="/javascripts/rescuesearchscript.js")

@@ -23,3 +23,11 @@ exports.getFoster = (req, res) => {
 exports.getRescuePartners = (req, res) => {
   res.render('rescuepartner', { title: 'partners | totes pets'});
 }
+
+exports.getTestimonials = (req, res) => {
+  quotes.find({ _id: req.params.id }).exec()
+  .then(testmnl => {
+    res.render('testimonials', { title: 'testimonials | totes pets', testmnl})
+  })
+  .catch(err => next(err));
+}

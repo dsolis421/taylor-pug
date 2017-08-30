@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  section.header
+    h1= testmnl[0].author
+  section#full-testimonial
+    aside
+      i.fa.fa-quote-left.fa-2x
+      p= testmnl[0].quote
+    article
+      each i in testmnl[0].story
+        p= i

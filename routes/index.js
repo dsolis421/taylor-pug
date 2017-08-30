@@ -11,4 +11,6 @@ router.get('/foster', totesController.getFoster);
 /*Get rescue partners page*/
 router.get('/rescuepartner', totesController.getRescuePartners);
 
+router.get('/testimonials/:id', totesController.getTestimonials);
+
 module.exports = router;

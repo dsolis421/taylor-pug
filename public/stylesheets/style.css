@@ -237,17 +237,41 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 5% 20%;
 }
 
-#testimonials i, #testimonials p {
+i,
+#testimonials p,
+#full-testimonial aside p {
   display: inline;
 }
 
-#testimonials i {
+#testimonials i,
+#full-testimonial i {
   color: #005005;
   margin-right: 20px;
 }
 
 #testimonials span, #testimonials a {
   display: block;
+}
+
+#full-testimonial {
+  padding: 3% 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#full-testimonial aside {
+  font-size: 15px;
+  height: auto;
+  text-align: left;
+  width: 20%;
+}
+
+#full-testimonial article {
+  height: auto;
+  padding: 0 5%;
+  text-align: left;
+  width: 80%;
 }
 
 footer {
