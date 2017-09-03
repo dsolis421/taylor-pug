@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 //const mongoose = require('mongoose');
 const quotes = mongoose.model('quotes');
+const articles = mongoose.model('articles');
 
 exports.getHomePage = (req, res) => {
   res.render('index');
@@ -28,6 +29,14 @@ exports.getTestimonials = (req, res) => {
   quotes.find({ _id: req.params.id }).exec()
   .then(testmnl => {
     res.render('testimonials', { title: 'testimonials | totes pets', testmnl})
+  })
+  .catch(err => next(err));
+}
+
+exports.getSingleArticle = (req, res) => {
+  articles.find({ quick: req.params.article }).exec()
+  .then(article => {
+    res.render('news', { title: 'news | totes pets', article })
   })
   .catch(err => next(err));
 }

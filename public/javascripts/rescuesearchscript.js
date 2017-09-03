@@ -46,7 +46,7 @@ function renderSelectedShelter(shelter) {
 }
 
 function getShelter(id) {
-  updateShelterStatus('Getting that family info...');
+  updateShelterStatus('totes getting that info... <i class="fa fa-spinner fa-pulse"></i>');
   $.getJSON($petfinderAPI + 'shelter.get?id=' + id + '&format=json&key=' + $devkey + '&callback=?')
     .done(function(shelterdata){
       shelterdetail = shelterdata.petfinder.shelter;
@@ -69,7 +69,7 @@ function getShelter(id) {
 };
 
 function getSheltersZip(zip) {
-  updateShelterStatus('Finding families...');
+  updateShelterStatus('totes finding rescues... <i class="fa fa-spinner fa-pulse"></i>');
   $.getJSON($petfinderAPI + 'shelter.find?location=' + zip + '&format=json&count=24&key=' + $devkey + '&callback=?')
     .done(function(petApiData){
       //console.log(petApiData);

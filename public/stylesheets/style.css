@@ -1,10 +1,6 @@
 body {
-  font-family: 'Martel Sans', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   color: black;
-}
-
-h3 {
-  text-align: center;
 }
 
 section {
@@ -29,6 +25,11 @@ h2 {
   font-size: 50px;
 }
 
+h3 {
+  font-size: 35px;
+  text-align: center;
+}
+
 #rescue-nav a,
 #rescue-nav a:visited,
 #rescue-nav a:focus {
@@ -43,7 +44,6 @@ h2 {
   background: none;
   border: none;
   color: white;
-  /*font-family: 'Caveat Brush', cursive;*/
   opacity: 0;
   transition: all 1s;
 }
@@ -260,18 +260,25 @@ i,
   flex-wrap: wrap;
 }
 
-#full-testimonial aside {
+aside {
   font-size: 15px;
   height: auto;
   text-align: left;
   width: 20%;
 }
 
-#full-testimonial article {
+article {
   height: auto;
   padding: 0 5%;
   text-align: left;
   width: 80%;
+}
+
+#news-article h2,
+#news-article h3 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
+  text-align: left;
 }
 
 footer {

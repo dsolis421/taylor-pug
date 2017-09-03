@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 /*models*/
 require('./models/breeds');
 require('./models/quotes');
+require('./models/articles');
 
 var index = require('./routes/index');
 /*var adoption = require('./routes/adoption');
