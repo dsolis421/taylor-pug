@@ -3,27 +3,21 @@ html
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", contect="width=device-widths, initial-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     title= title
     link(rel="stylesheet", href="/stylesheets/css-reset.css")
-    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
     link(href="https://fonts.googleapis.com/css?family=Caveat+Brush|Yantramanav:300", rel="stylesheet")  
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     header
-      nav(role="navigation").navbar.navbar-default.navbar-fixed-top#rescue-nav
-        .container
-          .navbar-header
-            button(type="button" data-toggle="collapse" data-target="#rescue-navbar-collapse").navbar-toggle.collapsed
-              span.sr-only Toggle navigation
-              i.fa.fa-paw
-            a.navbar-brand#logo(href="/") totes pets
-          .collapse.navbar-collapse#rescue-navbar-collapse
-            ul.nav.navbar-nav.navbar-right
-              li
-                a.rescue-menu(href="/adoption") adoption
-              li
-                a.rescue-menu(href="/foster") foster
+      nav.toggle-nav#top-nav
+        a.rescue-menu(href="/") home
+        a.rescue-menu(href="/news") news
+        a.rescue-menu(href="/adoption") adoption
+        a.rescue-menu(href="/foster") foster
+        .icon
+          i.fa.fa-paw
     block content
     
     footer#contact.row

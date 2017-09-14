@@ -7,7 +7,6 @@ section {
   height: auto;
   margin: 0 auto;
   text-align: center;
-  width: 85%;
 }
 
 section p, section q, section span {
@@ -31,26 +30,42 @@ h3 {
   text-align: center;
 }
 
-#rescue-nav a,
-#rescue-nav a:visited,
-#rescue-nav a:focus {
-  color: white;
-}
-
-#rescue-nav a:hover {
-  text-decoration: underline;
-}
-
-#rescue-nav {
+.toggle-nav {
+  align-content: center;
   background: none;
   border: none;
   color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-size: 25px;
   opacity: 0;
+  padding: 10px;
+  position: fixed;
   transition: all 1s;
+  width: 100%;
 }
 
-#logo, #rescue-nav {
-  font-size: 25px;
+.toggle-nav a,
+.toggle-nav a:visited,
+.toggle-nav a:focus {
+  color: white;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.toggle-nav a:hover {
+  text-decoration: underline;
+}
+
+.toggle-nav .icon {
+  border: 1px solid white;
+  border-radius: 2px;
+  display: none;
+  padding: 2px 5px 0 5px;
+  width: auto;
 }
 
 .row {
@@ -280,6 +295,7 @@ article {
 footer {
   background: #005005;
   color: white;
+  height: auto;
 }
 
 footer > div {
@@ -293,8 +309,33 @@ footer p {
 
 @media screen and (max-width: 437px) {
 
-  #rescue-nav {
+  .toggle-nav {
     background-color: #005005;
+  }
+
+  .toggle-nav a:not(:first-child) {
+    display: none;
+  }
+
+  .toggle-nav .icon {
+    float: right;
+    display: block;
+  }
+
+/*  .toggle-nav.responsive {
+    position: relative;
+  }
+
+  .toggle-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }*/
+
+  .toggle-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
   }
 
   .intro > div {

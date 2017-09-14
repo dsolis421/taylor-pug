@@ -1,8 +1,8 @@
 function lazyLoadIntro() {
   setTimeout(function(){
-    $('#rescue-nav, #intro > div').css("opacity","1");
+    $('#top-nav, #intro > div').css("opacity","1");
     if($(window).width() <= 437){
-      $('#rescue-nav').css('background','#005005');
+      $('#top-nav').css('background','#005005');
     }
   }, 700);
 }
@@ -35,8 +35,13 @@ $(document).ready(function() {
     }
   });
 
-  $('#rescue-navbar-collapse a, #logo').click(function(){
-    $('#rescue-navbar-collapse').removeClass("in");
-    $('#rescue-navbar-collapse').attr("aria-expanded",false);
+  $('#top-nav .icon, #top-nav a').click(function(){
+    var x = document.getElementById("top-nav");
+    if (x.className === "toggle-nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "toggle-nav";
+    }
+    console.log('clicked top nav');
   });
 });
