@@ -40,3 +40,11 @@ exports.getSingleArticle = (req, res) => {
   })
   .catch(err => next(err));
 }
+
+exports.getArticles = (req, res) => {
+  articles.find().exec()
+  .then(articles => {
+    res.render('news', { title: 'news | totes pets', articles })
+  })
+  .catch(err => next(err));
+}

@@ -29,9 +29,9 @@ $(document).ready(function() {
   $(document).scroll(function(){
     var $scroll = $(document).scrollTop();
     if ($scroll > 150) {
-      $('#rescue-nav').css('background','#005005');
+      $('.toggle-nav').css('background','#005005');
     } else if ($scroll == 0 && $(window).width() > 437) {
-      $('#rescue-nav').css('background','none');
+      $('.toggle-nav').css('background','none');
     }
   });
 

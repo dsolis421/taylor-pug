@@ -13,6 +13,8 @@ router.get('/rescuepartner', totesController.getRescuePartners);
 
 router.get('/testimonials/:id', totesController.getTestimonials);
 
+router.get('/news', totesController.getArticles);
+
 router.get('/news/:article', totesController.getSingleArticle);
 
 module.exports = router;

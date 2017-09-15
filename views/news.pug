@@ -3,11 +3,8 @@ extends layout
 block content
   section.header
     h1 news
-  section#news-article
+  section#news
     aside
+      each h in articles
+        h3= h.headline
     article
-      h2= article[0].headline
-      each i in article[0].story
-        h3= i.subheader
-        each x in i.text
-          p!= x

@@ -42,7 +42,7 @@ h3 {
   opacity: 0;
   padding: 10px;
   position: fixed;
-  transition: all 1s;
+  transition: all .7s;
   width: 100%;
 }
 
@@ -311,15 +311,17 @@ footer p {
 
   .toggle-nav {
     background-color: #005005;
+    display: block;
+    flex: none;
   }
 
-  .toggle-nav a:not(:first-child) {
+  .toggle-nav a {
     display: none;
   }
 
   .toggle-nav .icon {
+    display: inline-block;
     float: right;
-    display: block;
   }
 
 /*  .toggle-nav.responsive {
