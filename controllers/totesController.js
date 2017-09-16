@@ -36,7 +36,7 @@ exports.getTestimonials = (req, res) => {
 exports.getSingleArticle = (req, res) => {
   articles.find({ quick: req.params.article }).exec()
   .then(article => {
-    res.render('news', { title: 'news | totes pets', article })
+    res.render('article', { title: 'news | totes pets', article })
   })
   .catch(err => next(err));
 }
