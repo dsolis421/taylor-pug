@@ -1,0 +1,17 @@
+extends layout
+
+block links
+  link(rel='stylesheet', href='/stylesheets/newsarticle.css')
+
+block content
+  section.header
+    .news-header
+      h2= article[0].headline
+      h4= article[0].author
+  section
+    article.news-article 
+      each n in article[0].story
+        h3= n.subheader
+        each x in n.text
+          p!= x
+    a(href="/news") Back to news

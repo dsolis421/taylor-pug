@@ -1,10 +1,14 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/stylesheets/news.css')
+
 block content
   section.header
     h1 news
   section#news
-    aside
-      each h in articles
-        h3= h.headline
-    article
+    each h in articles
+      .article-block
+        .article-top
+          a(href=`/news/${h.quick}`)
+            h4= h.headline

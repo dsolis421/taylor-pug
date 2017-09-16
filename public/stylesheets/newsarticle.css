@@ -1,0 +1,21 @@
+article {
+  margin: 10px auto;
+  width: 70%;
+  text-align: left;
+}
+
+.news-header {
+  width: 90%;
+  text-align: left;
+}
+
+.news-header h2,
+.news-article h3 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
+.news-header h2 {
+  color: white;
+}
