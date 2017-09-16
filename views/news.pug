@@ -4,8 +4,13 @@ block links
   link(rel='stylesheet', href='/stylesheets/news.css')
 
 block content
-  section.header
-    h1 news
+  section#news-header
+    .header
+      h1 news
+  section
+    .top-story    
+      h2= articles[0].headline
+      p!= articles[0].story[0].text[0]
   section#news
     each h in articles
       .article-block

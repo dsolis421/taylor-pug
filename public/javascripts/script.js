@@ -1,6 +1,6 @@
 function lazyLoadIntro() {
   setTimeout(function(){
-    $('#top-nav, #intro > div').css("opacity","1");
+    $('#top-nav, .header').css("opacity","1");
     if($(window).width() <= 437){
       $('#top-nav').css('background','#005005');
     }

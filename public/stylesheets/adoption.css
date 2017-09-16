@@ -1,0 +1,112 @@
+#adoption-header > div > div {
+  background: #60ad5e;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 50px auto 0 auto;
+}
+
+#shelter-search {
+  border: none;
+  color: black;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 10px 10px;
+  width: 170px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#shelter-searchgo {
+  color: white;
+  display: inline-block;
+  margin-left: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#shelter-search:focus {
+  outline: none;
+}
+
+#adoption {
+  height: auto;
+}
+
+#adoption h2 {
+  text-align: left;
+}
+
+.shelter {
+  border: 2px solid #2e7d32;
+  color: black;
+  cursor: pointer;
+  height: auto;
+  padding: 5px;
+  position: relative;
+  margin: 5px auto;
+  text-align: center;
+  transition: all .1s;
+  width: 300px;
+}
+
+.shelter:last-of-type {
+  margin-bottom: 20px;
+}
+
+.shelter:hover {
+  box-shadow: 2px 2px 3px grey;
+  transform: scale(1.03);
+}
+
+.shelter > div {
+  background: #60ad5e;
+  bottom: 0;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -5px;
+  position: absolute;
+  width: 100%;
+}
+
+.shelter h4 {
+  margin-bottom: 40px;
+}
+
+.shelter-detail {
+  border-radius: 5px;
+  color: black;
+  height: auto;
+  padding: 5px;
+  margin: 5px auto;
+  text-align: left;
+  width: 80%;
+}
+
+.shelter-header {
+  border: 4px solid #005005;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 5px auto;
+  width: 95%;
+}
+
+.shelter-header > div {
+  width: 400px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.shelter-name {
+  text-align: center;
+}

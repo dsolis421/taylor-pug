@@ -1,14 +1,18 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/stylesheets/adoption.css')
+
 block content
-  section.header#adoption-header
-    h1 adoption
-    div
-      span Find A Shelter
-      input#shelter-search(type="number" placeholder="Zip Code")
-      i#shelter-searchgo.fa.fa-search
-    span Powered by 
-      a(href="https://www.petfinder.com" target="_blank") Petfinder
+  section#adoption-header
+    .header
+      h1 adoption
+      div
+        span Find A Shelter
+        input#shelter-search(type="number" placeholder="Zip Code")
+        i#shelter-searchgo.fa.fa-search
+      span Powered by 
+        a(href="https://www.petfinder.com" target="_blank") Petfinder
   section#adoption
     div
       span#search-status

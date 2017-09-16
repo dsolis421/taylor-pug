@@ -5,6 +5,19 @@
   justify-content: center;
 }
 
+.top-story {
+  height: 300px;
+  margin: 15px auto;
+  text-align: left;
+  width: 80%;
+}
+
+.top-story h2 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: bold;
+  text-align: left;
+}
+
 .article-block {
   border: 3px solid #b3b3b3;
   height: 300px;
