@@ -1,0 +1,17 @@
+#news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.article-block {
+  border: 3px solid #b3b3b3;
+  height: 300px;
+  margin: 15px;
+  width: 300px;
+}
+
+.article-block a {
+  color: inherit;
+  text-decoration: none;
+}
