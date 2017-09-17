@@ -80,6 +80,7 @@ h3 {
 }
 
 .toggle-nav a:hover {
+  color: white;
   text-decoration: underline;
 }
 
@@ -112,7 +113,32 @@ h3 {
 }
 
 #intro .header {
-  padding: 200px 10% 20px 10%;
+  height: 100vh;
+  padding: 20% 10% 20px 10%;
+}
+
+.header i {
+  color: #999;
+}
+
+#walk-in {
+  height: auto;
+  margin: 20px auto;
+  width: 45px;
+}
+
+#walk-in i {
+  display: block;
+  opacity: 0;
+  transition: all .6s;
+}
+
+#walk-in i:nth-of-type(even) {
+  text-align: right;
+}
+
+#walk-in i:nth-of-type(odd) {
+  text-align: left;
 }
 
 .error-stack {
@@ -126,20 +152,9 @@ h3 {
   align-content: center;
 }
 
-#mission h2,
 #action-call h2 {
   color: #005005;
   font-family: 'Caveat Brush', cursive;
-}
-
-#mission > div {
-  height: auto;
-  margin: 0 auto;
-  width: 60%;
-}
-
-#mission i {
-  color: #005005;
 }
 
 #action-call > div {
@@ -156,33 +171,6 @@ h3 {
   line-height: 35px;
   margin: 10px auto;
   width: 150px;
-}
-
-#testimonials {
-  padding: 5% 20%;
-}
-
-i,
-#testimonials p,
-#full-testimonial aside p {
-  display: inline;
-}
-
-#testimonials i,
-#full-testimonial i {
-  color: #005005;
-  margin-right: 20px;
-}
-
-#testimonials span, #testimonials a {
-  display: block;
-}
-
-#full-testimonial {
-  padding: 3% 10%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 footer {

@@ -113,3 +113,30 @@ input[type=number]::-webkit-outer-spin-button {
 .shelter-name {
   text-align: center;
 }
+
+#testimonials {
+  padding: 5% 20%;
+}
+
+i,
+#testimonials p,
+#full-testimonial aside p {
+  display: inline;
+}
+
+#testimonials i,
+#full-testimonial i {
+  color: #005005;
+  margin-right: 20px;
+}
+
+#testimonials span, #testimonials a {
+  display: block;
+}
+
+#full-testimonial {
+  padding: 3% 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
