@@ -19,3 +19,12 @@ article {
 .news-header h2 {
   color: white;
 }
+
+.news-article q {
+  font-style: italic;
+  margin: 15px 10px;
+}
+
+.news-article p {
+  margin: 15px 0;
+}
