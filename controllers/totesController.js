@@ -42,7 +42,7 @@ exports.getSingleArticle = (req, res) => {
 }
 
 exports.getArticles = (req, res) => {
-  articles.find().exec()
+  articles.find().sort({ order: -1 }).exec()
   .then(articles => {
     res.render('news', { title: 'news | totes pets', articles })
   })

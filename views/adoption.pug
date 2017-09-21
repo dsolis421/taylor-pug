@@ -7,21 +7,8 @@ block content
   section#adoption-header
     .header
       h1 adoption
-      div
-        span Find A Shelter
-        input#shelter-search(type="number" placeholder="Zip Code")
-        i#shelter-searchgo.fa.fa-search
-      span Powered by 
-        a(href="https://www.petfinder.com" target="_blank") Petfinder
-  section#adoption
-    div
-      span#search-status
-    #shelters
   section#testimonials
     i.fa.fa-quote-left.fa-3x
     p.quote= testmnl[0].quote
     span.author= " - " + testmnl[0].author
     a(href=`/testimonials/${testmnl[0]._id}`) Read More
-
-block scripts
-  script(src="/javascripts/rescuesearchscript.js")

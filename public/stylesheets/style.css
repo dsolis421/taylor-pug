@@ -38,7 +38,10 @@ section {
   text-align: center;
 }
 
-section p, section q, section span {
+section p,
+section q,
+section span,
+section li {
   font-size: 25px;
 }
 
@@ -204,16 +207,6 @@ footer p {
     display: inline-block;
     float: right;
   }
-
-/*  .toggle-nav.responsive {
-    position: relative;
-  }
-
-  .toggle-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }*/
 
   .toggle-nav.responsive a {
     float: none;

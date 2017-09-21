@@ -41,3 +41,10 @@
   margin: 15px;
   width: 300px;
 }
+
+.article-top {
+  background: #005005;
+  color: white;
+  height: auto;
+  padding: 5px;
+}

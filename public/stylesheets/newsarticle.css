@@ -28,3 +28,7 @@ article {
 .news-article p {
   margin: 15px 0;
 }
+
+.news-article ul {
+  margin-left: 40px;
+}
