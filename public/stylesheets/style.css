@@ -1,3 +1,11 @@
+/*
+new color scheme
+light green: #D4F7EC, rgb(212, 247, 236)
+green: #448D76, rgb(68, 141, 118)
+orange: #FD4D0C, rgb(253, 77, 12)
+dark orange: #B84014, rgb(184, 64, 20)
+brown: #341509, rgb(52, 21, 9)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,7 +37,8 @@ a:focus {
 
 body {
   font-family: 'Yantramanav', sans-serif;
-  color: black;
+  color: #341509;
+  background: #D4F7EC;
 }
 
 section {
@@ -46,6 +55,7 @@ section li {
 }
 
 h1 {
+  color: #341509;
   font-family: 'Caveat Brush', cursive;
   font-size: 150px;
 }
@@ -62,7 +72,7 @@ h3 {
   align-content: center;
   background: none;
   border: none;
-  color: white;
+  color: #D4F7EC;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -72,6 +82,7 @@ h3 {
   position: fixed;
   transition: all .7s;
   width: 100%;
+  z-index: 100;
 }
 
 .toggle-nav a,
@@ -83,12 +94,12 @@ h3 {
 }
 
 .toggle-nav a:hover {
-  color: white;
+  color: #D4F7EC;
   text-decoration: underline;
 }
 
 .toggle-nav .icon {
-  border: 1px solid white;
+  border: 1px solid #D4F7EC;
   border-radius: 2px;
   display: none;
   padding: 2px 5px 0 5px;
@@ -101,8 +112,8 @@ h3 {
 }
 
 .header {
-  background: rgba(0, 80, 5, .6);
-  color: white;
+  background: rgba(68, 141, 118, .8);
+  color: #341509;
   opacity: 0;
   padding: 80px 10% 20px 10%;
   transition: all 1s;
@@ -117,11 +128,15 @@ h3 {
 
 #intro .header {
   height: 100vh;
-  padding: 20% 10% 20px 10%;
+  padding: 20vh 10% 20px 10%;
+}
+
+#intro .header p {
+  font-weight: bold;
 }
 
 .header i {
-  color: #999;
+  color: #FD4D0C;
 }
 
 #walk-in {
@@ -148,7 +163,7 @@ h3 {
   text-align: left;
 }
 
-#shelters, #action-call {
+#action-call {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -156,7 +171,7 @@ h3 {
 }
 
 #action-call h2 {
-  color: #005005;
+  color: #341509;
   font-family: 'Caveat Brush', cursive;
 }
 
@@ -168,8 +183,8 @@ h3 {
 }
 
 .learn-more {
-  background: #60ad5e;
-  color: white;
+  background: #FD4D0C;
+  color: #D4F7EC;
   height: 35px;
   line-height: 35px;
   margin: 10px auto;
@@ -177,8 +192,8 @@ h3 {
 }
 
 footer {
-  background: #005005;
-  color: white;
+  color: #D4F7EC;
+  background: #341509;
   height: auto;
 }
 
@@ -222,10 +237,6 @@ footer p {
     font-size: 15px;
   }
 
-  #shelter-search {
-    width: 90%;
-  }
-
 }
 
 @media screen and (max-width: 616px) {
@@ -235,7 +246,4 @@ footer p {
     height: auto;
   }
 
-  .shelter {
-    width: 90%;
-  }
 }

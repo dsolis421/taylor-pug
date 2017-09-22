@@ -13,7 +13,7 @@
 }
 
 .top-story {
-  background: rgba(255, 255, 255, .7);
+  background: #D4F7EC;
   text-align: left;
   width: 80%;
   height: auto;
@@ -22,7 +22,7 @@
 }
 
 .top-story h2 {
-  color: #005005;
+  color: #341509;
   font-weight: bold;
   text-align: left;
 }
