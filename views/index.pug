@@ -3,17 +3,20 @@ extends layout
 block content
   section#intro
     .header
-      h1 totes pets
-      p Help find loving, forever homes for surrendered and rescued animals.
-      i.fa.fa-paw.fa-2x
-      p Promote safe and responsible pet ownership.
-      #walk-in
-        i.fa.fa-paw.fa-flip-vertical
-        i.fa.fa-paw.fa-flip-vertical
-        i.fa.fa-paw.fa-flip-vertical
-        i.fa.fa-paw.fa-flip-vertical
-        i.fa.fa-paw.fa-flip-vertical
-        i.fa.fa-paw.fa-flip-vertical
+      .paw-row
+        .paw-menu#home-paw
+          a(href="/") home
+        .paw-menu#news-paw
+          a(href="/news") news
+        .paw-menu#adopt-paw
+          a(href="/adoption") adopt
+        .paw-menu#foster-paw
+          a(href="/foster") foster
+      .paw-pad  
+        h1 totes pets
+        p Help find loving, forever homes for surrendered and rescued animals.
+        i.fa.fa-paw.fa-2x
+        p Promote safe and responsible pet ownership.
   section#action-call
     div
       h2 adopt
