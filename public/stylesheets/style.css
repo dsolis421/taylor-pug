@@ -79,7 +79,6 @@ h3 {
   flex-direction: row;
   flex-wrap: nowrap;
   font-size: 25px;
-  opacity: 0;
   padding: 10px;
   position: fixed;
   transition: all .7s;
@@ -145,23 +144,23 @@ h3 {
   transform: scale(10);
 }
 
-#home-paw {
+#news-paw {
   transform: rotate(-20deg);
   margin-top: 100px;
   margin-right: -10px;
 }
 
-#news-paw {
+#adopt-paw {
   transform: rotate(-10deg);
   margin-right: 15px;
 }
 
-#adopt-paw {
+#foster-paw {
   transform: rotate(10deg);
   margin-left: 15px;
 }
 
-#foster-paw {
+#blog-paw {
   transform: rotate(20deg);
   margin-top: 100px;
   margin-left: -10px;

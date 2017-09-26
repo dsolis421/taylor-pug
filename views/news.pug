@@ -4,11 +4,14 @@ block links
   link(rel='stylesheet', href='/stylesheets/news.css')
 
 block content
+  include nav.pug
   section#news-header
     .header
       .top-story
-        a(href=`/news/${articles[0].quick}`)   
-          h2= articles[0].headline
+        .latest-article
+          h3 Latest Article
+          a(href=`/news/${articles[0].quick}`)   
+            h2= articles[0].headline
         p= articles[0].date
         p!= articles[0].story[0].text[0]
         a(href=`/news/${articles[0].quick}`) Full Story

@@ -28,8 +28,8 @@ $(document).ready(function() {
 
   $(document).scroll(function(){
     var $scroll = $(document).scrollTop();
-    if ($scroll > 150) {
-      $('.toggle-nav').css('background','#341509');
+    if ($scroll > 50) {
+      $('.toggle-nav').css('background','#E0763D');
     } else if ($scroll == 0 && $(window).width() > 437) {
       $('.toggle-nav').css('background','none');
     }
