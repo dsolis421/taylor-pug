@@ -1,12 +1,15 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/stylesheets/testimonials.css')
+
 block content
   include nav.pug
   section.header
     h1= testmnl[0].author
   section#full-testimonial
     aside
-      i.fa.fa-quote-left.fa-2x
+      i.fa.fa-quote-left.fa-3x
       p= testmnl[0].quote
     article
       each i in testmnl[0].testimonial

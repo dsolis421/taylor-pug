@@ -58,7 +58,6 @@ h1 {
   color: #341509;
   font-family: 'Caveat Brush', cursive;
   font-size: 150px;
-  opacity: 1;
   transition: all 2s;
 }
 
@@ -83,6 +82,7 @@ h3 {
   position: fixed;
   transition: all .7s;
   width: 100%;
+  z-index: 100;
 }
 
 .toggle-nav a,

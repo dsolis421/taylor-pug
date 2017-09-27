@@ -1,0 +1,33 @@
+#full-testimonial {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+#full-testimonial p {
+  margin: 6px 0;
+}
+
+aside {
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  width: 200px;
+}
+
+aside i {
+  color: #F7A375;
+}
+
+aside p {
+  border-bottom: 3px solid #F7A375;
+  font-size: 20px;
+  opacity: .8;
+}
+
+article {
+  padding: 10px 30px;
+  margin: 0 auto;
+  width: 80%;
+}
