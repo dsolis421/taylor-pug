@@ -1,0 +1,7 @@
+extends index
+
+block blogpreview
+  aside
+    a(href=`/blog/${bpreview[0].quick}`)
+      h2= bpreview[0].headline
+  article

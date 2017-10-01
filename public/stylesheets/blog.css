@@ -1,11 +1,11 @@
-#news {
+#blog {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.top-story {
+.top-post {
   text-align: left;
   width: 80%;
   height: auto;
@@ -13,42 +13,49 @@
   width: auto;
 }
 
-.top-story h2 {
+.top-post h2 {
   color: #341509;
-  font-weight: bold;
   text-align: left;
 }
 
-.top-story h2:hover,
-.top-story a:first-of-type:hover {
+.top-post h2:hover,
+.top-post a:first-of-type:hover {
   color: #fff;
   text-decoration: underline;
 }
 
-.top-story p {
+.top-post p {
   color: black;
 }
 
-.top-story a:last-of-type {
-  color: blue;
+.top-post > a:last-of-type {
+  color: #F7A375;
+  display: block;
+  margin-top: 15px;
 }
 
-.latest-article h3 {
+.latest-post h4 {
   background: #F7A375;
   text-align: center;
   width: 200px;
 }
 
-.article-block {
-  border: 3px solid #F7A375;
-  height: 300px;
-  margin: 15px;
-  width: 300px;
+.blog-block {
+  border-top: 3px solid #F7A375;
+  height: auto;
+  margin: 15px auto;
+  width: 80%;
 }
 
-.article-top {
+.post-top {
   background: #F7A375;
   color: white;
   height: auto;
-  padding: 5px;
+  float: left;
+  padding: 10px;
+  width: 250px;
+}
+
+.post-top a {
+  color: inherit;
 }

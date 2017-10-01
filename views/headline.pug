@@ -8,11 +8,11 @@ block content
   section.header
     .news-header
       h2= article[0].headline
-      h3= article[0].author + " | " + article[0].date
+      h4= article[0].author + " | " + article[0].date
   section
     article.news-article 
       each n in article[0].story
-        h3= n.subheader
+        h4= n.subheader
         each x in n.text
           p!= x
-      a(href="/news") Back to news
+      a(href="/articles") Back to articles

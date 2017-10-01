@@ -1,32 +1,32 @@
-.news-article {
+.blog-post {
   margin: 10px auto;
   width: 70%;
   text-align: left;
 }
 
-.news-header {
+.blog-header {
   width: 90%;
   text-align: left;
 }
 
-.news-header h2,
-.news-article h3 {
+.blog-header h2,
+.blog-post h3 {
   text-align: left;
 }
 
-.news-header h2 {
+.blog-header h2 {
   color: white;
 }
 
-.news-article q {
+.blog-post q {
   font-style: italic;
   margin: 15px 10px;
 }
 
-.news-article p {
+.blog-post p {
   margin: 15px 0;
 }
 
-.news-article ul {
+.blog-post ul {
   margin-left: 40px;
 }

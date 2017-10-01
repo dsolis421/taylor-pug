@@ -3,9 +3,9 @@ import mongoose from 'mongoose';
 const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');
 
-exports.getHomePage = (req, res) => {
-  res.render('index');
-}
+/*exports.getHomePage = (req, res) => {
+  res.render('index', { title: 'totes pets' });
+}*/
 
 exports.getAdoption = (req, res, next) => {
   //aggregate can get a random document from mongodb
@@ -28,23 +28,59 @@ exports.getRescuePartners = (req, res) => {
 exports.getTestimonials = (req, res) => {
   quotes.find({ _id: req.params.id }).exec()
   .then(testmnl => {
-    res.render('testimonials', { title: 'testimonials | totes pets', testmnl})
+    res.render('stories', { title: 'stories | totes pets', testmnl})
   })
   .catch(err => next(err));
 }
 
 exports.getSingleArticle = (req, res) => {
-  articles.find({ quick: req.params.article }).exec()
+  articles.find({ quick: req.params.headline }).exec()
   .then(article => {
-    res.render('article', { title: 'news | totes pets', article })
+    res.render('headline', { title: 'articles | totes pets', article })
   })
   .catch(err => next(err));
 }
 
 exports.getArticles = (req, res) => {
-  articles.find().sort({ order: -1 }).exec()
+  articles.find({ type: "article" }).sort({ order: -1 }).exec()
   .then(articles => {
-    res.render('news', { title: 'news | totes pets', articles })
+    res.render('articles', { title: 'articles | totes pets', articles })
+  })
+  .catch(err => next(err));
+}
+
+exports.getBlogPost = (req, res) => {
+  articles.find({ quick: req.params.headline }).exec()
+  .then(post => {
+    res.render('blogpost', { title: 'blog | totes pets', post })
+  })
+  .catch(err => next(err));
+}
+
+exports.getBlog = (req, res) => {
+  articles.find({ type: "blog" }).sort({ order: -1 }).exec()
+  .then(posts => {
+    res.render('blog', { title: 'blog | totes pets', posts })
+  })
+  .catch(err => next(err));
+}
+
+exports.getPreviews = (req, res) => {
+  var previews = {a: undefined, b: undefined};
+  articles.find({ type: "article" }).sort({ order: -1}).limit(1).exec()
+  .then(apreview => {
+    console.log(apreview);
+    previews.a = apreview;
+  })
+  .then(() => {
+    articles.find({ type: "blog" }).sort({ order: -1}).limit(1).exec()
+    .then(bpreview => {
+      console.log(bpreview)
+      previews.b = bpreview;
+      console.log(previews);
+      res.render('index',{ title: 'totes pets', previews });
+    })
+    .catch(err => next(err));
   })
   .catch(err => next(err));
 }

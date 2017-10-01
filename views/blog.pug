@@ -1,0 +1,25 @@
+extends layout
+
+block links
+  link(rel='stylesheet', href='/stylesheets/blog.css')
+
+block content
+  include nav.pug
+  section#blog-header
+    .header
+      .top-post
+        .latest-post
+          h4 Latest Post
+          a(href=`/blog/${posts[0].quick}`)   
+            h2= posts[0].headline
+        p= posts[0].date
+        p!= posts[0].story[0].text[0]
+        a(href=`/blog/${posts[0].quick}`) Full Post
+  section#blog
+    each h in posts
+      .blog-block
+        .post-top
+          a(href=`/blog/${h.quick}`)
+            h4= h.headline
+          p= h.date
+        p!= h.story[0].text[0]

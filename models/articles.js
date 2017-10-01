@@ -12,6 +12,10 @@ const storySchema = new mongoose.Schema({
 })
 
 const articleSchema = new mongoose.Schema({
+  'type' : {
+    type: String,
+    required: true
+  },
   'headline' : {
     type: String,
     required: true

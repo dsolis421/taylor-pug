@@ -1,15 +1,12 @@
 function lazyLoadIntro() {
   setTimeout(function(){
-    $('#top-nav, .header h1, #walk-in').css("opacity","1");
-    if($(window).width() <= 437){
-      $('#top-nav').css('background','#462310');
-    }
+    $('.paw-menu > a, .paw-pad p, .paw-pad i').css("opacity","1");
   }, 1000);
 }
 
 $(document).ready(function() {
 
-  //lazyLoadIntro();
+  lazyLoadIntro();
 
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {

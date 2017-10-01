@@ -4,8 +4,8 @@ block content
   section#intro
     .header
       .paw-row
-        .paw-menu#news-paw
-          a(href="/news") news
+        .paw-menu#articles-paw
+          a(href="/articles") articles
         .paw-menu#adopt-paw
           a(href="/adoption") adopt        
         .paw-menu#foster-paw
@@ -17,16 +17,18 @@ block content
         p Help find loving, forever homes for surrendered and rescued animals.
         i.fa.fa-paw.fa-2x
         p Promote safe and responsible pet ownership.
-  section#action-call
-    div
-      h2 adopt
-      p 
-        |Hundreds of sheltered pets are waiting to come home to a loving family. Are you new to pet adoption?
-        | Know what to expect and how to find the ideal pet for your living situation.
-      .learn-more Learn More
-    div
-      h2 foster
-      p 
-        |Fostering can be a great way to help a rescued pet transition to a forever home. It also helps shelters
-        |maintain available space for new arrivals.
-      .learn-more Learn More
+  section.preview#article-preview
+    aside
+      a(href=`/articles/${previews.a[0].quick}`)
+        h3= previews.a[0].headline
+    article
+      p!= previews.a[0].story[0].text[0]
+      a(href=`/articles/${previews.a[0].quick}`) Read Article
+  section.preview#blog-preview
+    aside
+      a(href=`/blog/${previews.b[0].quick}`)
+        h3= previews.b[0].headline
+    article
+      p!= previews.b[0].story[0].text[0]
+      a(href=`/blog/${previews.b[0].quick}`) Read Blog
+    

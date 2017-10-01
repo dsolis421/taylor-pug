@@ -1,7 +1,7 @@
 extends layout
 
 block links
-  link(rel='stylesheet', href='/stylesheets/news.css')
+  link(rel='stylesheet', href='/stylesheets/articles.css')
 
 block content
   include nav.pug
@@ -9,15 +9,15 @@ block content
     .header
       .top-story
         .latest-article
-          h3 Latest Article
-          a(href=`/news/${articles[0].quick}`)   
+          h4 Latest Article
+          a(href=`/articles/${articles[0].quick}`)   
             h2= articles[0].headline
         p= articles[0].date
         p!= articles[0].story[0].text[0]
-        a(href=`/news/${articles[0].quick}`) Full Story
+        a(href=`/articles/${articles[0].quick}`) Full Story
   section#news
     each h in articles
       .article-block
         .article-top
-          a(href=`/news/${h.quick}`)
-            h3= h.headline
+          a(href=`/articles/${h.quick}`)
+            h4= h.headline
