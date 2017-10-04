@@ -1,5 +1,11 @@
 extends layout
 
+block metas
+  meta(property="og:url", content=`http://localhost:3000/articles/${article[0].quick}`)
+  meta(property="og:type", content="website")
+  meta(property="og:title", content="Your Website Title")
+  meta(property="og:description", content="Your description")
+
 block links
   link(rel='stylesheet', href='/stylesheets/newsarticle.css')
 
@@ -9,6 +15,8 @@ block content
     .news-header
       h2= article[0].headline
       h4= article[0].author + " | " + article[0].date
+      #fb-root
+      .fb-share-button(data-href=`http://localhost:3000/articles/${article[0].quick}`, data-layout="button_count")
   section
     article.news-article 
       each n in article[0].story
@@ -16,3 +24,6 @@ block content
         each x in n.text
           p!= x
       a(href="/articles") Back to articles
+      
+block scripts
+  script(src="/javascripts/fbscript.js")
