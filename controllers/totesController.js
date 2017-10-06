@@ -84,3 +84,7 @@ exports.getPreviews = (req, res) => {
   })
   .catch(err => next(err));
 }
+
+exports.getPetNameApp = (req, res) => {
+  res.render('petname', { title: 'name | totes pets' });
+}
