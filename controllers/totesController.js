@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 //const mongoose = require('mongoose');
 const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');
+const petnames = mongoose.model('petnames');
 
 /*exports.getHomePage = (req, res) => {
   res.render('index', { title: 'totes pets' });
@@ -87,4 +88,23 @@ exports.getPreviews = (req, res) => {
 
 exports.getPetNameApp = (req, res) => {
   res.render('petname', { title: 'name | totes pets' });
+}
+
+exports.getSuggestName = (req, res) => {
+  var typearray = req.params.type.split(",");
+  var genderarray= req.params.gender.split(",");
+  var colorarray = req.params.color.split(",");
+  var qualityarray = req.params.qualities.split(',');
+  petnames.find({ type: { $in: typearray},
+    gender: { $in: genderarray },
+    color: { $in: colorarray},
+    qualities: { $in: qualityarray }}).exec()
+  .then(name => {
+    console.log(name);
+    res.render('suggestname', { title: 'name | totes pets', name});
+  })
+  .catch(err => {
+    console.log('getSuggestName',err);
+    next(err);
+  });
 }

@@ -1,0 +1,11 @@
+extends layout
+
+block links
+  link(rel='stylesheet', href='/stylesheets/petname.css')
+    
+block content
+  include nav.pug
+  .header
+    h2= name[0].name
+  section
+    p= name[0].description

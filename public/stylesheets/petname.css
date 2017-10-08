@@ -1,8 +1,24 @@
-.pet-quality-selector {
+.pet-name-selector,
+.suggest-name {
+  border-radius: 3px;
+  cursor: pointer;
   font-size: 20px;
   height: 50px;
   line-height: 50px;
+  margin: 5px 10px;
   width: 200px;
+}
+
+.pet-name-selector {
+  border: 2px solid #F7A375;
+}
+
+.pet-name-choices {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 20px;
 }
 
 .selected {
@@ -11,4 +27,9 @@
 
 .unselected {
   background: none;
+}
+
+.suggest-name {
+  background: #5DA4C1;
+  color: #fff;
 }

@@ -23,4 +23,6 @@ router.get('/blog/:headline', totesController.getBlogPost);
 
 router.get('/petname', totesController.getPetNameApp);
 
+router.get('/petname/:type/:gender/:color/:qualities', totesController.getSuggestName);
+
 module.exports = router;
