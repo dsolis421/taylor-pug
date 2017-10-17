@@ -21,4 +21,4 @@ const breedSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('breeds', breedSchema);
+module.exports = mongoose.model('breeds', breedSchema);

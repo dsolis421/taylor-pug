@@ -27,4 +27,4 @@ const nameSchema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model('petnames', nameSchema);
+module.exports = mongoose.model('petnames', nameSchema);

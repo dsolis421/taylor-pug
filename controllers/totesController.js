@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+var mongoose = require('mongoose');
 //const mongoose = require('mongoose');
 const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');

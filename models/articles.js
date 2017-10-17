@@ -42,4 +42,4 @@ const articleSchema = new mongoose.Schema({
   }
 })
 
-export default mongoose.model('articles', articleSchema);
+module.exports = mongoose.model('articles', articleSchema);
