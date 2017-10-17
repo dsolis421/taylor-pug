@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-import mongoose from 'mongoose';
+var mongoose = require('mongoose');
 require('dotenv').config();
 var app = require('../app');
 var debug = require('debug')('totes:server');
