@@ -1,22 +1,11 @@
 extends layout
 
 block content
-  section#intro
-    .header
-      .paw-row
-        .paw-menu#articles-paw
-          a(href="/articles") articles
-        .paw-menu#adopt-paw
-          a(href="/adoption") adopt        
-        .paw-menu#foster-paw
-          a(href="/foster") foster
-        .paw-menu#blog-paw
-          a(href="/blog") blog
-      .paw-pad  
-        h1 totes pets
-        p Help find loving, forever homes for surrendered and rescued animals.
-        i.fa.fa-paw.fa-2x
-        p Promote safe and responsible pet ownership.
+  section#intro  
+    h1 totes pets
+    p Help find loving, forever homes for surrendered and rescued animals.
+    i.fa.fa-paw.fa-2x
+    p Promote safe and responsible pet ownership.
   section.preview#article-preview
     aside
       a(href=`/articles/${previews.a[0].quick}`)

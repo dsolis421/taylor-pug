@@ -1,12 +1,4 @@
-function lazyLoadIntro() {
-  setTimeout(function(){
-    $('.paw-menu > a, .paw-pad p, .paw-pad i').css("opacity","1");
-  }, 1000);
-}
-
 $(document).ready(function() {
-
-  lazyLoadIntro();
 
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {

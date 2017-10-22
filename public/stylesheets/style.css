@@ -127,86 +127,17 @@ h5 {
   padding: 80px 10% 20px 10%;
 }
 
-.paw-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: auto;
-  justify-content: center;
-}
-
-.paw-menu {
-  background: #E0763D;
-  height: 230px;
-  line-height: 220px;
-  margin-bottom: -120px;
-  width: 120px;
-  border-radius: 100%;
-}
-
-.paw-menu:hover {
-  background: #F7A375;
-  color: #462310;
-  cursor: pointer;
-}
-
-.paw-menu:hover > a {
-  text-decoration: underline;
-}
-
-.paw-menu > a {
-  opacity: 0;
-}
-
-#articles-paw {
-  transform: rotate(-20deg);
-  margin-top: 100px;
-  margin-right: -10px;
-}
-
-#adopt-paw {
-  transform: rotate(-10deg);
-  margin-right: 15px;
-}
-
-#foster-paw {
-  transform: rotate(10deg);
-  margin-left: 15px;
-}
-
-#blog-paw {
-  transform: rotate(20deg);
-  margin-top: 100px;
-  margin-left: -10px;
-}
-
-#intro .header {
+#intro {
   height: 100vh;
   padding: 10vh 10% 20px 10%;
 }
 
-#intro .header p {
+#intro p {
   font-weight: bold;
 }
 
 .header > i:first-of-type {
   color: #E0763D;
-}
-
-.paw-pad {
-  background-image: url('../images/pawpad.svg');
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: auto;
-  padding-top: 70px;
-  width: auto;
-}
-
-.paw-pad p,
-.paw-pad i {
-  opacity: 0;
-  transition: all 1s;
 }
 
 .preview {
