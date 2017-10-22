@@ -2,22 +2,24 @@ extends layout
 
 block content
   section#intro  
-    h1 totes pets
+    img(src="../images/color_logo_transparent.svg")
     p Help find loving, forever homes for surrendered and rescued animals.
-    i.fa.fa-paw.fa-2x
     p Promote safe and responsible pet ownership.
-  section.preview#article-preview
-    aside
+    i.fa.fa-angle-down.fa-4x
+  section.pet-name-gen
+    h3 Pet Name Suggesterator
+    p Having trouble finding the perfect name for your newly adopted pet?
+    P Let us help
+    a(href="/petname") Pet Names
+  section.preview
+    article
       a(href=`/articles/${previews.a[0].quick}`)
         h3= previews.a[0].headline
-    article
       p!= previews.a[0].story[0].text[0]
       a(href=`/articles/${previews.a[0].quick}`) Read Article
-  section.preview#blog-preview
-    aside
+    article
       a(href=`/blog/${previews.b[0].quick}`)
         h3= previews.b[0].headline
-    article
       p!= previews.b[0].story[0].text[0]
       a(href=`/blog/${previews.b[0].quick}`) Read Blog
     

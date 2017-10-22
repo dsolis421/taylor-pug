@@ -128,57 +128,89 @@ h5 {
 }
 
 #intro {
+  background: -webkit-radial-gradient(#a3ccdc,#5DA4C1);
+  background: -o-radial-gradient(#a3ccdc,#5DA4C1);
+  background: -moz-radial-gradient(#a3ccdc,#5DA4C1);
+  background: radial-gradient(#a3ccdc,#5DA4C1);
+  color: #fff;
   height: 100vh;
   padding: 10vh 10% 20px 10%;
 }
 
+#intro img {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
 #intro p {
   font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#intro i {
+  color: #F7A375;
+  -webkit-animation: moveAngleDown 2s linear infinite;
+  -moz-animation: moveAngleDown 2s linear infinite;
+  -o-animation: moveAngleDown 2s linear infinite;
+  animation: moveAngleDown 2s linear infinite;
+}
+
+@-webkit-keyframes moveAngleDown {
+    from { -webkit-transform: rotateY(0deg); }
+    to   { -webkit-transform: rotateY(180deg); }
+}
+
+@-moz-keyframes moveAngleDown {
+    from { -moz-transform: rotateY(0deg); }
+    to   { -moz-transform: rotateY(180deg); }
+}
+
+@-o-keyframes moveAngleDown {
+    from { -o-transform: rotateY(0deg); }
+    to   { -o-transform: rotateY(180deg); }
+}
+
+@keyframes moveAngleDown {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(180deg); }
 }
 
 .header > i:first-of-type {
   color: #E0763D;
 }
 
+.pet-name-gen {
+  border-bottom: 30px solid #5DA4C1;
+  padding: 40px;
+}
+
 .preview {
-  border-top: 10px solid #E0763D;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.preview:last-of-type {
-  border-bottom: 10px solid #E0763D;
-}
-
-.preview aside {
-  text-align: center;
-  min-width: 250px;
-  max-width: 30%;
-  padding: 20px;
+  width: 80%;
 }
 
 .preview article {
   text-align: left;
-  min-width: 250px;
-  max-width: 62%;
+  min-width: 300px;
+  max-width: 40%;
+  margin: 0 auto;
   padding: 30px;
 }
 
+.pet-name-gen a:last-of-type,
 .preview article > a:last-of-type {
   background: #F7A375;
   color: #fff;
   display: block;
-  margin-top: 15px;
+  margin: 15px auto 0 auto;
   padding: 5px 15px;
   text-align: center;
   width: 200px;
 }
-
-/*.preview aside > a {
-  color: inherit;
-  font-size: 50px;
-}*/
 
 .error-stack {
   text-align: left;
@@ -238,11 +270,9 @@ footer p {
 
 }
 
-@media screen and (max-width: 616px) {
-
-  .intro > div > div {
-    width: 90%;
-    height: auto;
+@media screen and (max-width: 916px) {
+  .preview article {
+    width: 80%;
+    padding: 10px;
   }
-
 }
