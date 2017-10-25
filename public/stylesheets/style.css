@@ -121,13 +121,27 @@ h5 {
 }
 
 .header {
-  /*background: rgba(68, 141, 118, .8);*/
   background: #5DA4C1;
+  background: -webkit-radial-gradient(#a3ccdc,#5DA4C1);
+  background: -o-radial-gradient(#a3ccdc,#5DA4C1);
+  background: -moz-radial-gradient(#a3ccdc,#5DA4C1);
+  background: radial-gradient(#a3ccdc,#5DA4C1);
   color: #fff;
-  padding: 80px 10% 20px 10%;
+  padding: 80px 15% 20px 15%;
+}
+
+.dark-header {
+  background: #5DA4C1;
+  background: -webkit-radial-gradient(#E0763D,#5DA4C1);
+  background: -o-radial-gradient(#E0763D,#5DA4C1);
+  background: -moz-radial-gradient(#E0763D,#5DA4C1);
+  background: radial-gradient(#E0763D,#5DA4C1);
+  color: #fff;
+  padding: 80px 15% 20px 15%;
 }
 
 #intro {
+  background: #5DA4C1;
   background: -webkit-radial-gradient(#a3ccdc,#5DA4C1);
   background: -o-radial-gradient(#a3ccdc,#5DA4C1);
   background: -moz-radial-gradient(#a3ccdc,#5DA4C1);
@@ -137,12 +151,18 @@ h5 {
   padding: 10vh 10% 20px 10%;
 }
 
-#intro img {
-  height: auto;
-  display: block;
-  margin: 0 auto;
+/*this padding hack was to get the svg to display in ie*/
+.logo-container {
   width: 50%;
-}
+  background-image: url("../images/color_logo_transparent.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  height: auto;
+  margin: 0 auto -14% auto;
+  padding: 0; /* reset */
+  padding-bottom: calc(50% * 1.13107606);
+ }
 
 #intro p {
   font-weight: bold;

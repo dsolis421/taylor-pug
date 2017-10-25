@@ -5,17 +5,14 @@
 }
 
 .blog-header {
-  width: 90%;
   text-align: left;
 }
 
 .blog-header h2,
-.blog-post h3 {
-  text-align: left;
-}
-
-.blog-header h2 {
+.blog-header h4 {
   color: white;
+  padding-left: 15px;
+  text-align: left;
 }
 
 .blog-post q {

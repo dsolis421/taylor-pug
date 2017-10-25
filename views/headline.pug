@@ -11,12 +11,10 @@ block links
 
 block content
   include nav.pug
-  section.header
+  section.dark-header
     .news-header
       h2= article[0].headline
       h4= article[0].author + " | " + article[0].date
-      #fb-root
-      .fb-share-button(data-href=`http://localhost:3000/articles/${article[0].quick}`, data-layout="button_count")
   section
     article.news-article 
       each n in article[0].story
@@ -26,4 +24,3 @@ block content
       a(href="/articles") Back to articles
       
 block scripts
-  script(src="/javascripts/fbscript.js")
