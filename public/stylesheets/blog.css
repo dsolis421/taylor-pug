@@ -28,12 +28,6 @@
   color: black;
 }
 
-.top-post > a:last-of-type {
-  color: #F7A375;
-  display: block;
-  margin-top: 15px;
-}
-
 .latest-post h4 {
   background: #F7A375;
   text-align: center;

@@ -28,12 +28,6 @@
   color: black;
 }
 
-.top-story a:last-of-type {
-  color: blue;
-  display: block;
-  margin-top: 15px;
-}
-
 .latest-article h4 {
   background: #F7A375;
   text-align: center;
@@ -42,7 +36,7 @@
 
 .article-block {
   border: 3px solid #F7A375;
-  height: 300px;
+  height: auto;
   margin: 15px;
   width: 300px;
 }
@@ -56,4 +50,9 @@
 
 .article-top a {
   color: inherit;
+}
+
+.article-block p {
+  margin: 10px;
+  text-align: left;
 }

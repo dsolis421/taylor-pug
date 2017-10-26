@@ -14,7 +14,7 @@ block content
             h2= posts[0].headline
         p= posts[0].date
         p!= posts[0].story[0].text[0]
-        a(href=`/blog/${posts[0].quick}`) Full Post
+        a.detail-anchor(href=`/blog/${posts[0].quick}`) Full Post
   section#blog
     each h in posts
       .blog-block

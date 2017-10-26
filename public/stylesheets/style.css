@@ -132,10 +132,10 @@ h5 {
 
 .dark-header {
   background: #5DA4C1;
-  background: -webkit-radial-gradient(#E0763D,#5DA4C1);
-  background: -o-radial-gradient(#E0763D,#5DA4C1);
-  background: -moz-radial-gradient(#E0763D,#5DA4C1);
-  background: radial-gradient(#E0763D,#5DA4C1);
+  background: -webkit-radial-gradient(#F7A375,#E0763D);
+  background: -o-radial-gradient(#F7A375,#E0763D);
+  background: -moz-radial-gradient(#F7A375,#E0763D);
+  background: radial-gradient(#F7A375,#E0763D);
   color: #fff;
   padding: 80px 15% 20px 15%;
 }
@@ -162,7 +162,7 @@ h5 {
   margin: 0 auto -14% auto;
   padding: 0; /* reset */
   padding-bottom: calc(50% * 1.13107606);
- }
+}
 
 #intro p {
   font-weight: bold;
@@ -199,6 +199,13 @@ h5 {
 
 .header > i:first-of-type {
   color: #E0763D;
+}
+
+.header .detail-anchor {
+  color: blue;
+  display: block;
+  margin-top: 15px;
+  width: 100px;
 }
 
 .pet-name-gen {

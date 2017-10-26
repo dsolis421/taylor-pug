@@ -14,10 +14,11 @@ block content
             h2= articles[0].headline
         p= articles[0].date
         p!= articles[0].story[0].text[0]
-        a(href=`/articles/${articles[0].quick}`) Full Story
+        a.detail-anchor(href=`/articles/${articles[0].quick}`) Full Story
   section#news
     each h in articles
       .article-block
         .article-top
           a(href=`/articles/${h.quick}`)
             h4= h.headline
+        p!=h.story[0].text[0]
