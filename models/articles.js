@@ -39,6 +39,10 @@ const articleSchema = new mongoose.Schema({
   'order' : {
     type: Number,
     required: true
+  },
+  'show' : {
+    type: String,
+    required: true
   }
 })
 

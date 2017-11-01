@@ -153,15 +153,15 @@ h5 {
 
 /*this padding hack was to get the svg to display in ie*/
 .logo-container {
-  width: 50%;
+  width: 45%;
   background-image: url("../images/color_logo_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
   box-sizing: content-box;
   height: auto;
-  margin: 0 auto -14% auto;
+  margin: 0 auto -12% auto;
   padding: 0; /* reset */
-  padding-bottom: calc(50% * 1.13107606);
+  padding-bottom: calc(45% * 1.13107606);
 }
 
 #intro p {
