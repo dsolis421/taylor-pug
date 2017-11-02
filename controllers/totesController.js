@@ -43,7 +43,7 @@ exports.getSingleArticle = (req, res) => {
 }
 
 exports.getArticles = (req, res) => {
-  articles.find({ type: "article" }).sort({ order: -1 }).exec()
+  articles.find({ type: "article", show: "y" }).sort({ order: -1 }).exec()
   .then(articles => {
     res.render('articles', { title: 'articles | totes pets', articles })
   })
@@ -59,7 +59,7 @@ exports.getBlogPost = (req, res) => {
 }
 
 exports.getBlog = (req, res) => {
-  articles.find({ type: "blog" }).sort({ order: -1 }).exec()
+  articles.find({ type: "blog", show: "y" }).sort({ order: -1 }).exec()
   .then(posts => {
     res.render('blog', { title: 'blog | totes pets', posts })
   })
@@ -68,13 +68,13 @@ exports.getBlog = (req, res) => {
 
 exports.getPreviews = (req, res) => {
   var previews = {a: undefined, b: undefined};
-  articles.find({ type: "article" }).sort({ order: -1}).limit(1).exec()
+  articles.find({ type: "article", show: "y" }).sort({ order: -1}).limit(1).exec()
   .then(apreview => {
     console.log(apreview);
     previews.a = apreview;
   })
   .then(() => {
-    articles.find({ type: "blog" }).sort({ order: -1}).limit(1).exec()
+    articles.find({ type: "blog", show: "y" }).sort({ order: -1}).limit(1).exec()
     .then(bpreview => {
       console.log(bpreview)
       previews.b = bpreview;
