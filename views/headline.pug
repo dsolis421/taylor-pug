@@ -2,9 +2,9 @@ extends layout
 
 block metas
   meta(property="og:url", content=`http://localhost:3000/articles/${article[0].quick}`)
-  meta(property="og:type", content="website")
-  meta(property="og:title", content="Your Website Title")
-  meta(property="og:description", content="Your description")
+  meta(property="og:type", content="article")
+  meta(property="og:title", content=`${article[0].headline}`)
+  meta(property="og:description", content="Something here")
 
 block links
   link(rel='stylesheet', href='/stylesheets/newsarticle.css')
@@ -15,6 +15,7 @@ block content
     .news-header
       h2= article[0].headline
       h4= article[0].author + " | " + article[0].date
+      h3 totes article
   section
     article.news-article 
       each n in article[0].story

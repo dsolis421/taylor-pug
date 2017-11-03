@@ -4,11 +4,23 @@
   text-align: left;
 }
 
+.news-header {
+  position: relative;
+}
+
 .news-header h2,
 .news-header h4 {
   color: white;
   padding-left: 15px;
   text-align: left;
+}
+
+.news-header h3 {
+  color: #F7A375;
+  bottom: 0;
+  text-align: right;
+  position: absolute;
+  right: 0;
 }
 
 .news-article q {
