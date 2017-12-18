@@ -25,4 +25,6 @@ router.get('/petname', totesController.getPetNameApp);
 
 router.get('/petname/:type/:gender/:color/:qualities', totesController.getSuggestName);
 
+router.get('/rescuesearch/:zip',totesController.getRescueOrg);
+
 module.exports = router;

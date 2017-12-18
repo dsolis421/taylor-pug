@@ -10,7 +10,8 @@ var bodyParser = require('body-parser');
 require('./models/quotes');
 require('./models/articles');
 require('./models/petnames');
-require('./models/')
+require('./models/rescueorgs');
+require('./models/availpets');
 
 var index = require('./routes/index');
 /*var adoption = require('./routes/adoption');

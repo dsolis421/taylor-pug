@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');
 const petnames = mongoose.model('petnames');
+const rescueorgs = mongoose.model('rescueorgs');
 
 /*exports.getHomePage = (req, res) => {
   res.render('index', { title: 'totes pets' });
@@ -104,7 +105,17 @@ exports.getSuggestName = (req, res) => {
     res.render('suggestname', { title: 'name | totes pets', name});
   })
   .catch(err => {
-    console.log('getSuggestName',err);
+    console.log('getSuggestName: ',err);
     next(err);
   });
+}
+
+exports.getRescueOrg = (req, res) => {
+  rescueorgs.find({ zip: req.params.zip }).exec()
+  .then(shelters => {
+    console.log(shelters);
+  })
+  .catch(err => {
+    console.log('getRescueOrg: ',err);
+  })
 }

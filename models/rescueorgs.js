@@ -84,7 +84,7 @@ const sheltersSchema = new mongoose.Schema({
   'allowAppSubmissions': {
     type: String,
     required: false
-  }
+  },
   'messageOrg': {
     type: String,
     required: false
