@@ -1,7 +1,7 @@
 //variables to available sections for color and qualities
 var $petcolors = ['black',
   'yellow','brown','grey',
-  'white','auburn','cinammon'];
+  'white','auburn','cinnamon'];
 var $petqualityselections = ['curious','strong',
   'clumsy','loud','affectionate', 'mischievous',
   'playful','calm','protective'];
