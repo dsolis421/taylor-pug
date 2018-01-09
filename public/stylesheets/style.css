@@ -147,21 +147,21 @@ h5 {
   background: -moz-radial-gradient(#a3ccdc,#5DA4C1);
   background: radial-gradient(#a3ccdc,#5DA4C1);
   color: #fff;
-  height: 100vh;
-  padding: 10vh 10% 20px 10%;
+  height: auto;
+  padding: 50px 10% 20px 10%;
 }
 
 /*this padding hack was to get the svg to display in ie*/
 .logo-container {
-  width: 45%;
+  width: 400px;
   background-image: url("../images/color_logo_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
   box-sizing: content-box;
   height: auto;
-  margin: 0 auto -12% auto;
+  margin: 0 auto -100px auto;
   padding: 0; /* reset */
-  padding-bottom: calc(45% * 1.13107606);
+  padding-bottom: calc(400px * 1.13107606);
 }
 
 #intro p {
@@ -214,18 +214,34 @@ h5 {
 }
 
 .preview {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 80%;
 }
 
 .preview article {
-  text-align: left;
   min-width: 300px;
-  max-width: 40%;
-  margin: 0 auto;
-  padding: 30px;
+  max-width: 100%;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.preview article h3,
+.preview article > p {
+  background: rgba(255, 255, 255, .7);
+  padding: 10px;
+}
+
+.preview article:first-of-type {
+  background-image: url('../images/pete-bellis-324941.jpg');
+  background-position: right;
+  background-size: cover;
+  padding: 30px 60% 30px 5%;
+}
+
+.preview article:last-of-type {
+  background-image: url('../images/dorota-dylka-69581.jpg');
+  background-position: left;
+  background-size: cover;
+  padding: 30px 5% 30px 60%;
 }
 
 .pet-name-gen a:last-of-type,
