@@ -47,7 +47,6 @@ li {
 }
 
 a,
-a:hover,
 a:visited,
 a:focus {
   color: inherit;
