@@ -9,14 +9,16 @@ const rescueorgs = mongoose.model('rescueorgs');
   res.render('index', { title: 'totes pets' });
 }*/
 
-exports.getAdoption = (req, res, next) => {
+exports.getAdoption = (req, res) => {
   //aggregate can get a random document from mongodb
   quotes.aggregate({$sample: {size: 1}}).exec()
   .then(testmnl => {
     console.log(testmnl);
     res.render('adoption', { title: 'adoption | totes pets', testmnl})
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getFoster = (req, res) => {
@@ -32,15 +34,20 @@ exports.getTestimonials = (req, res) => {
   .then(testmnl => {
     res.render('stories', { title: 'stories | totes pets', testmnl})
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getSingleArticle = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(article => {
-    res.render('headline', { title: 'articles | totes pets', article })
+    console.log(article);
+    res.render('headline', { title: 'articles | totes pets', article });
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getArticles = (req, res) => {
@@ -48,7 +55,9 @@ exports.getArticles = (req, res) => {
   .then(articles => {
     res.render('articles', { title: 'articles | totes pets', articles })
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getBlogPost = (req, res) => {
@@ -56,7 +65,9 @@ exports.getBlogPost = (req, res) => {
   .then(post => {
     res.render('blogpost', { title: 'blog | totes pets', post })
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getBlog = (req, res) => {
@@ -64,7 +75,9 @@ exports.getBlog = (req, res) => {
   .then(posts => {
     res.render('blog', { title: 'blog | totes pets', posts })
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getPreviews = (req, res) => {
@@ -84,7 +97,9 @@ exports.getPreviews = (req, res) => {
     })
     .catch(err => next(err));
   })
-  .catch(err => next(err));
+  .catch(err => {
+    next(err);
+  });
 }
 
 exports.getPetNameApp = (req, res) => {
@@ -117,5 +132,6 @@ exports.getRescueOrg = (req, res) => {
   })
   .catch(err => {
     console.log('getRescueOrg: ',err);
-  })
+    next(err);
+  });
 }

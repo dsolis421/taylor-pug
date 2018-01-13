@@ -254,6 +254,11 @@ h5 {
   width: 200px;
 }
 
+.error-header {
+  height: 350px;
+  width: 80%;
+}
+
 .error-stack {
   text-align: left;
 }

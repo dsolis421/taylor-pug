@@ -1,8 +1,12 @@
 extends layout
 
 block content
+  include nav.pug
+  section#intro
+    .logo-container
+    h3= message
+    a(href='javascript:history.back()') Go Back
   section
-    h1= message
     h2= error.status
     .error-stack
       pre #{error.stack}
