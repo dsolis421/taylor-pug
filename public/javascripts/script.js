@@ -19,7 +19,7 @@ $(document).ready(function() {
     var $scroll = $(document).scrollTop();
     if ($scroll > 50) {
       $('.toggle-nav').css('background','#E0763D');
-    } else if ($scroll == 0 && $(window).width() > 437) {
+    } else if ($scroll == 0) {
       $('.toggle-nav').css('background','none');
     }
   });
