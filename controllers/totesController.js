@@ -5,10 +5,6 @@ const articles = mongoose.model('articles');
 const petnames = mongoose.model('petnames');
 const rescueorgs = mongoose.model('rescueorgs');
 
-/*exports.getHomePage = (req, res) => {
-  res.render('index', { title: 'totes pets' });
-}*/
-
 exports.getAdoption = (req, res) => {
   //aggregate can get a random document from mongodb
   quotes.aggregate({$sample: {size: 1}}).exec()
@@ -19,10 +15,6 @@ exports.getAdoption = (req, res) => {
   .catch(err => {
     next(err);
   });
-}
-
-exports.getFoster = (req, res) => {
-  res.render('foster', { title: 'foster | totes pets'});
 }
 
 exports.getRescuePartners = (req, res) => {

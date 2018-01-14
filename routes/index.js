@@ -6,8 +6,7 @@ const totesController = require('../controllers/totesController');
 router.get('/', totesController.getPreviews);
 /*GET adoption page*/
 router.get('/adoption', totesController.getAdoption);
-/*Get foster page*/
-router.get('/foster', totesController.getFoster);
+
 /*Get rescue partners page*/
 router.get('/rescuepartner', totesController.getRescuePartners);
 
