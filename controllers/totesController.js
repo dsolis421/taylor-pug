@@ -21,6 +21,8 @@ exports.getRescuePartners = (req, res) => {
   res.render('rescuepartner', { title: 'partners | totes pets'});
 }
 
+exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'about us | totes pets'});
+
 exports.getTestimonials = (req, res) => {
   quotes.find({ _id: req.params.id }).exec()
   .then(testmnl => {
