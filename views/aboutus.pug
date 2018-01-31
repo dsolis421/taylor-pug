@@ -1,5 +1,8 @@
 extends layout
 
+block links
+  link(rel='stylesheet', href='/stylesheets/aboutus.css')
+
 block content
   include nav.pug
   section.intro 
@@ -11,17 +14,18 @@ block content
       h2 Our Story
       h4 Thank you, for taking the time to get to know us.
       p First of all, it means a lot that you visited our site and want to know more about us. 
-        | There are plenty of great sites out there just as passionate and committed to this cause as we are.
+        | There are plenty of great sites out there, just as passionate and committed to this cause as we are.
         | Totes Pets will strive to offer a wider collection of information that covers both dogs and cats, starting from adoption all the way through a happy family life.
         | Our hope is that you continue to choose our site for the latest and greatest news on all things pets.
       h4 Who "we" are
-      p My name is Danny Solis. I'm the proud owner of two rescued shih tzus, Tobee and Taylor. I'm also husband to a wonder wife, Stacy. They are my world.
-      p I'm an IT Project Manager by day, web developer by night.
-      p I'm a volunteer for 
-        a(href="https://humaneheroes.org") Texas Humane Heroes.
+      p My name is Danny Solis. I'm an IT Project Manager by day, web developer by night. I often refer to myself as an amateur photographer because it sounds better than accidental picture takerer. 
+        | I'm also a happy volunteer for 
+        a(href="https://humaneheroes.org") Texas Humane Heroes. 
+        | Nothing makes my day like watching an adopted pet go home with a loving family. 
+      p I'm husband to a wonder wife, Stacy. We're the proud hoomans for two rescued shih tzus, Tobee and Taylor. Together, they are my world. 
       P We are a family that is committed to animal welfare, rescue, and adoption.
       h4 An idea becomes reality
-      p Totes Pets started as a class project while attending classes at Austin Coding Academy. 
+      p Totes Pets started as a project, for me, while attending classes at Austin Coding Academy. 
         | One particlar evening on my way to class, I witnessed an event that left a lasting mark on me personally. 
         | Driving down the left lane of a typically congested freeway, I spotted something moving in the center lane. 
         | As I got closer, I made the startling discover that this thing was actually a kitten laying on the pavement. 
@@ -29,4 +33,13 @@ block content
         | I was prepared to do whatever was necessary to rescue this kitten from the situation. What happened next was truly amazing. 
         | Just as I passed the kitten, ready to stop traffic, the entire freeway came to a standstill. It became obvious that I wasn't the only one who saw the kitten.
         | All lanes of traffic stopped simultaneously, with no prompting or direction. A passenger in a car from the left lane hopped out, scooped up the kitten, and jumped back into his vehicle. 
-        | 
+        | Traffic slowly proceeded and the 5 o'clock rush didn't miss a beat. I was dumbfounded in the best possible way.
+      p Reflecting on that moment, I decided that I could, and should, do more to make an impact on the causes that matter to me. 
+        | It also struck me as coincidental that this incident occured while I was deep in the midst of learning web development. 
+        | It was an epiphany that eventually led to the birth of Totes Pets, a site dedicated a simple mission:
+      span.mission Help find loving, forever homes for surrendered and rescued animals
+      span.mission Promote safe and responsible pet ownership
+      p I dedicated the next year to designing and building the website that I envisioned after that fateful day on the expressway. 
+        | It's been a long road sprinkled with humbling failures and tail-wagging victories. 
+        | You find yourself at the culmination of that work, now live on the world wide web. I hope you enjoy it and I hope you come back often. 
+      h4.article-close Peace, Love, and Paws.

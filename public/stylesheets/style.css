@@ -45,6 +45,12 @@ li {
   font-size: 23px;
 }
 
+p,
+q,
+span {
+  line-height: 40px;
+}
+
 a,
 a:visited,
 a:focus {
@@ -160,9 +166,10 @@ ul {
   background-image: url("../images/color_logo_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   box-sizing: content-box;
   height: auto;
-  margin: 0 auto -100px auto;
+  margin: 0 auto -50px auto;
   padding: 0; /* reset */
   padding-bottom: calc(400px * 1.13107606);
 }
@@ -218,8 +225,8 @@ ul {
 }*/
 
 .featured-content-hero {
-  border-top: 15px solid #E0763D;
-  border-bottom: 15px solid #E0763D;
+  border-top: 20px solid #5DA4C1;
+  border-bottom: 20px solid #5DA4C1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -249,7 +256,7 @@ ul {
 .preview article {
   min-width: 300px;
   max-width: 100%;
-  margin: 10px 0;
+  margin: 0;
   text-align: left;
 }
 
@@ -259,17 +266,21 @@ ul {
   padding: 10px;
 }
 
-.preview article:first-of-type {
+.article-preview {
   background-image: url('../images/pete-bellis-324941.jpg');
   background-position: right;
   background-size: cover;
+  background-attachment: fixed;
+  height: auto;
   padding: 30px 60% 30px 5%;
 }
 
-.preview article:last-of-type {
+.blog-preview {
   background-image: url('../images/dorota-dylka-69581.jpg');
   background-position: left;
   background-size: cover;
+  background-attachment: fixed;
+  height: auto;
   padding: 30px 5% 30px 60%;
 }
 
