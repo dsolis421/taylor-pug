@@ -13,12 +13,13 @@ block content
       p Having trouble finding the perfect name for your newly adopted pet?
       P Let us help
       a(href="/petname") Pet Names
-  section.preview
+  section
     article.article-preview
-      a(href=`/articles/${previews.a[0].quick}`)
-        h3= previews.a[0].headline
-      p!= previews.a[0].story[0].text[0]
-      a(href=`/articles/${previews.a[0].quick}`) Read Article
+      .preview
+        a(href=`/articles/${previews.a[0].quick}`)
+          h3= previews.a[0].headline
+        p!= previews.a[0].story[0].text[0]
+        a(href=`/articles/${previews.a[0].quick}`) Read Article
   .featured-content-hero
     div
       h3 Thinking about adopting a pet?    
@@ -29,10 +30,11 @@ block content
       a(href='/articles/the-adoption-process') The Adoption Process 
       a(href='#') Bringing Your Pet Home
       a(href='#') Living Happily Ever After
-  section.preview
-    article.blog-preview
-      a(href=`/blog/${previews.b[0].quick}`)
-        h3= previews.b[0].headline
-      p!= previews.b[0].story[0].text[0]
-      a(href=`/blog/${previews.b[0].quick}`) Read Blog
+  section
+    article.blog-preview.clear-fix
+      .preview
+        a(href=`/blog/${previews.b[0].quick}`)
+          h3= previews.b[0].headline
+        p!= previews.b[0].story[0].text[0]
+        a(href=`/blog/${previews.b[0].quick}`) Read Blog
   

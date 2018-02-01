@@ -116,6 +116,7 @@ ul {
 .toggle-nav a:focus {
   color: #fff;
   display: block;
+  line-height: 50px;
   margin: 0 auto;
   text-align: center;
 }
@@ -126,6 +127,18 @@ ul {
   display: none;
   padding: 2px 5px 0 5px;
   width: auto;
+}
+
+.nav-logo-container {
+  width: 200px;
+  background-image: url("../images/white_textonly_transparent.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: content-box;
+  height: auto;
+  padding: 0; /* reset */
+  padding-bottom: 50px;
 }
 
 .header {
@@ -163,7 +176,7 @@ ul {
 /*this padding hack was to get the svg to display in ie*/
 .logo-container {
   width: 400px;
-  background-image: url("../images/color_logo_transparent.svg");
+  background-image: url("../images/color_logoonly_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -230,6 +243,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 30px 5%;
 }
 
 .featured-content-hero div {
@@ -250,19 +264,20 @@ ul {
 }
 
 .preview {
-  width: 80%;
+  background: rgba(255, 255, 255, .7);
+  padding: 15px;
+  width: 30%;
 }
 
-.preview article {
+article {
   min-width: 300px;
-  max-width: 100%;
-  margin: 0;
+  max-width: 80%;
+  margin: 20px auto;
   text-align: left;
 }
 
-.preview article h3,
-.preview article > p {
-  background: rgba(255, 255, 255, .7);
+.preview h3,
+.preview > p {
   padding: 10px;
 }
 
@@ -270,26 +285,26 @@ ul {
   background-image: url('../images/pete-bellis-324941.jpg');
   background-position: right;
   background-size: cover;
-  background-attachment: fixed;
   height: auto;
-  padding: 30px 60% 30px 5%;
+}
+
+.blog-preview > .preview {
+  float: right;
 }
 
 .blog-preview {
   background-image: url('../images/dorota-dylka-69581.jpg');
   background-position: left;
   background-size: cover;
-  background-attachment: fixed;
   height: auto;
-  padding: 30px 5% 30px 60%;
 }
 
 .pet-name-gen a:last-of-type,
-.preview article > a:last-of-type {
+.preview > a:last-of-type {
   background: #F7A375;
   color: #fff;
   display: block;
-  margin: 15px auto 0 auto;
+  margin: 15px auto;
   padding: 5px 15px;
   text-align: center;
   width: 200px;
@@ -341,6 +356,13 @@ ul {
 /*only needed in dev mode*/
 .error-stack {
   text-align: left;
+}
+
+.clear-fix::after {
+  content: " ";
+  clear: both;
+  display: block;
+  visibility: hidden;
 }
 
 footer {
