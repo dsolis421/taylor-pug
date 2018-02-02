@@ -125,12 +125,16 @@ ul {
   border: 1px solid #D4F7EC;
   border-radius: 2px;
   display: none;
-  padding: 2px 5px 0 5px;
+  padding: 2px 15px 0 15px;
   width: auto;
 }
 
+.icon > i {
+  line-height: 50px;
+  font-size: 30px;
+}
+
 .nav-logo-container {
-  width: 200px;
   background-image: url("../images/white_textonly_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -139,6 +143,7 @@ ul {
   height: auto;
   padding: 0; /* reset */
   padding-bottom: 50px;
+  width: 130px;
 }
 
 .header {
@@ -386,7 +391,7 @@ footer p {
   padding: 0px 0px 0px 10px;
 }
 
-@media screen and (max-width: 437px) {
+@media screen and (max-width: 555px) {
   h1 {
     font-size: 90px;
   }
@@ -420,7 +425,7 @@ footer p {
     flex: none;
   }
 
-  .toggle-nav a {
+  .toggle-nav .rescue-menu {
     display: none;
   }
 
@@ -443,8 +448,7 @@ footer p {
   /*this padding hack was to get the svg to display in ie*/
   .logo-container {
     width: 90%;
-    margin: 0 auto -20% auto;
-    padding-bottom: calc(90% * 1.13107606);
+    margin: 0 auto -10% auto;
   }
 
   .featured-content-hero div {
@@ -456,9 +460,13 @@ footer p {
     width: 90%;
   }
 
-  .preview article:first-of-type,
-  .preview article:last-of-type {
+  .article-preview,
+  .blog-preview {
     background-image: none;
     padding: 0;
+  }
+
+  footer {
+    text-align: center;
   }
 }
