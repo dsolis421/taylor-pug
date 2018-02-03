@@ -4,8 +4,8 @@ block content
   include nav.pug
   section.intro 
     .logo-container
-    p Help find loving, forever homes for surrendered and rescued animals
-    p Promote safe and responsible pet ownership
+    h4 Help find loving, forever homes for surrendered and rescued animals
+    h4 Promote safe and responsible pet ownership
     i.fa.fa-chevron-down.fa-2x
   //
     section.pet-name-gen
@@ -15,6 +15,7 @@ block content
       a(href="/petname") Pet Names
   section
     article.article-preview
+      h2.landing-labels articles
       .preview
         a(href=`/articles/${previews.a[0].quick}`)
           h3= previews.a[0].headline
@@ -32,6 +33,7 @@ block content
       a(href='#') Living Happily Ever After
   section
     article.blog-preview.clear-fix
+      h2.landing-labels blog
       .preview
         a(href=`/blog/${previews.b[0].quick}`)
           h3= previews.b[0].headline

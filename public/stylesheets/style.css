@@ -37,6 +37,13 @@ section {
   margin: 0 auto;
 }
 
+article {
+  min-width: 300px;
+  max-width: 80%;
+  margin: 50px auto;
+  text-align: left;
+}
+
 a,
 p,
 q,
@@ -192,8 +199,7 @@ ul {
   padding-bottom: calc(400px * 1.13107606);
 }
 
-.intro p {
-  font-weight: bold;
+.intro h4 {
   margin-bottom: 15px;
 }
 
@@ -225,11 +231,6 @@ ul {
     to   { transform: rotateY(180deg); }
 }
 
-/*Not sure I need this any more?
-.header > i:first-of-type {
-  color: #E0763D;
-}*/
-
 .header .detail-anchor {
   color: blue;
   display: block;
@@ -242,9 +243,30 @@ ul {
   padding: 40px;
 }*/
 
+.article-preview,
+.blog-preview {
+  position: relative;
+}
+
+.landing-labels {
+  color: #fff;
+  display: inline-block;
+  opacity: .4;
+  padding: 0 2%;
+  position: absolute;
+  top: 50%;
+  transition: all 1s;
+  transform: translateY(-50%);
+  width: auto;
+}
+
+.article-preview > .landing-labels {
+  right: 0;
+}
+
 .featured-content-hero {
-  border-top: 20px solid #5DA4C1;
-  border-bottom: 20px solid #5DA4C1;
+  border-top: 50px solid #5DA4C1;
+  border-bottom: 50px solid #5DA4C1;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -271,14 +293,9 @@ ul {
 .preview {
   background: rgba(255, 255, 255, .7);
   padding: 15px;
+  transition: all 1s;
   width: 30%;
-}
-
-article {
-  min-width: 300px;
-  max-width: 80%;
-  margin: 20px auto;
-  text-align: left;
+  opacity: 0;
 }
 
 .preview h3,
@@ -303,6 +320,14 @@ article {
   background-size: cover;
   height: auto;
 }
+
+.article-preview:hover > h2,
+.blog-preview:hover > h2,
+.article-preview:hover .preview,
+.blog-preview:hover .preview {
+  opacity: 1;
+}
+
 
 .pet-name-gen a:last-of-type,
 .preview > a:last-of-type {
