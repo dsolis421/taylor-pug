@@ -500,6 +500,7 @@ footer p {
 
   .article-preview,
   .blog-preview {
+    background-position: center;
     padding: 0;
   }
 

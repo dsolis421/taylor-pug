@@ -10,6 +10,11 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     block links
     script(src="/javascripts/fontawesome-all.js")
+    script.
+      var host = "www.totespets.com";
+      if ((host === window.location.host) && (window.location.protocol != "https")){
+        window.location.protocol = "https";
+        }
   body    
     block content
     
