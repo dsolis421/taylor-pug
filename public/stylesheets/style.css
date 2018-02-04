@@ -203,7 +203,7 @@ ul {
   margin-bottom: 15px;
 }
 
-.intro i {
+.intro .fa-angle-down {
   color: #F7A375;
   -webkit-animation: moveAngleDown 2s linear infinite;
   -moz-animation: moveAngleDown 2s linear infinite;
@@ -270,7 +270,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 30px 5%;
+  padding: 80px 5%;
 }
 
 .featured-content-hero div {
@@ -409,11 +409,19 @@ footer > div {
   padding: 20px 10px;
   height: auto;
   margin: 0 auto;
-  width: 300px;
+  width: 350px;
+}
+
+footer div:nth-of-type(2) {
+  text-align: center;
+}
+
+footer div:nth-of-type(3) {
+  text-align: right;
 }
 
 footer p {
-  padding: 0px 0px 0px 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 @media screen and (max-width: 555px) {
@@ -430,11 +438,11 @@ footer p {
   }
 
   h4 {
-    font-size: 30px;
+    font-size: 23px;
   }
 
   h5 {
-    font-size: 25px;
+    font-size: 18px;
   }
 
   a,
@@ -459,21 +467,26 @@ footer p {
     float: right;
   }
 
-  .toggle-nav.responsive a {
+  .toggle-nav.responsive {
     background: #E0763D;
+  }
+
+  .toggle-nav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
 
   .intro {
-    padding: 50px 10% 20px 10%;
+    padding: 2% 10% 20px 10%;
   }
 
   /*this padding hack was to get the svg to display in ie*/
   .logo-container {
+    height: auto;
+    margin: 0 auto -25% auto;
+    padding-bottom: calc(90vw * 1.13107606);
     width: 90%;
-    margin: 0 auto -10% auto;
   }
 
   .featured-content-hero div {
@@ -482,16 +495,80 @@ footer p {
   }
 
   .preview {
-    width: 90%;
+    width: calc(100% - 30px);
   }
 
   .article-preview,
   .blog-preview {
-    background-image: none;
     padding: 0;
   }
 
-  footer {
+  .blog-preview > .preview {
+    float: none;
+  }
+
+  .article-preview:hover > h2,
+  .blog-preview:hover > h2 {
+    opacity: 0;
+  }
+
+  footer > div,
+  footer div:nth-of-type(3) {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 556px) and (max-width: 1200px) {
+  h1 {
+    font-size: 120px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 45px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  a,
+  p,
+  q,
+  span,
+  li {
+    font-size: 20px;
+  }
+
+  p,
+  q,
+  span {
+    line-height: 30px;
+  }
+
+  .preview {
+    width: 50%;
+  }
+
+  .article-preview:hover > h2,
+  .blog-preview:hover > h2 {
+    opacity: 0;
+  }
+
+  .pet-name-gen a:last-of-type,
+  .preview > a:last-of-type {
+    width: auto;
+  }
+
+  footer > div,
+  footer div:nth-of-type(3) {
     text-align: center;
   }
 }
