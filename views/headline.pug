@@ -1,10 +1,10 @@
 extends layout
 
 block metas
-  meta(property="og:url", content=`http://localhost:3000/articles/${article[0].quick}`)
+  meta(property="og:url", content=`https://totespets.com/articles/${article[0].quick}`)
   meta(property="og:type", content="article")
   meta(property="og:title", content=`${article[0].headline}`)
-  meta(property="og:description", content="Something here")
+  meta(property="og:description", content=`${article[0].desc}`)
 
 block links
   link(rel='stylesheet', href='/stylesheets/newsarticle.css')

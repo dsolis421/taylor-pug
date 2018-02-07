@@ -30,6 +30,9 @@ body {
   font-family: 'Yantramanav', sans-serif;
   color: #462310;
   background: #fff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 section {
@@ -451,6 +454,12 @@ footer p {
   span,
   li {
     font-size: 18px;
+  }
+
+  p,
+  q,
+  span {
+    line-height: 25px;
   }
 
   .toggle-nav {

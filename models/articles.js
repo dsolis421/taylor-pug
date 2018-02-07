@@ -43,6 +43,10 @@ const articleSchema = new mongoose.Schema({
   'show' : {
     type: String,
     required: true
+  },
+  'desc' : {
+    type: String,
+    required: false
   }
 })
 
