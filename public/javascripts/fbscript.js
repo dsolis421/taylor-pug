@@ -30,6 +30,6 @@ $(document).ready(function(){
   };
 
   $('#try').click(function(){
-    shareToFB($(this).attr('data-url'));
+    shareToFB($('#try i').attr('data-url'));
   });
 });
