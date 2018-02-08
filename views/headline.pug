@@ -16,7 +16,8 @@ block content
       h2= article[0].headline
       h4= article[0].author + " | " + article[0].date
       h3 totes article
-      i.fab.fa-facebook.fa-2x(onclick="FB.ui")
+      span#try
+        i.fab.fa-facebook.fa-2x(data-url=`https://totespets.com/articles/${article[0].quick}`)
   section
     article.news-article 
       each n in article[0].story
