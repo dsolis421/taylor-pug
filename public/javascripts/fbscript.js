@@ -7,7 +7,7 @@
  }(document, 'script', 'facebook-jssdk'));
 
 function shareToFB(url) {
-    console.log('click facebook');
+    console.log('click facebook', url);
     FB.ui({
       method: 'share_open_graph',
       action_type: 'og.likes',
@@ -30,6 +30,6 @@ $(document).ready(function(){
   };
 
   $('#try').click(function(){
-    shareToFB($('#try i').attr('data-url'));
+    shareToFB($(this).attr('data-url'));
   });
 });
