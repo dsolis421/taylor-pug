@@ -9,14 +9,9 @@
 function shareToFB(url) {
     console.log('click facebook', url);
     FB.ui({
-      method: 'share_open_graph',
-      action_type: 'og.likes',
-      action_properties: JSON.stringify({
-        object: url,
-      })
-    }, function(response){
-      console.log(response);
-    });
+      method: 'share',
+      href: url,
+    }, function(response){});
 };
 
 $(document).ready(function(){
@@ -29,7 +24,7 @@ $(document).ready(function(){
     });
   };
 
-  $('#try').click(function(){
+  $('#fb-share').click(function(){
     shareToFB($(this).attr('data-url'));
   });
 });

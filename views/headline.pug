@@ -16,8 +16,10 @@ block content
       h2= article[0].headline
       h4= article[0].author + " | " + article[0].date
       h3 totes article
-      span#try(data-url=`https://totespets.com/articles/${article[0].quick}`)
-        i.fab.fa-facebook.fa-2x
+      span#fb-share(data-url=`https://totespets.com/articles/${article[0].quick}`)
+        i.fab.fa-facebook-square
+      span#tw-share
+        i.fab.fa-twitter-square
   section
     article.news-article 
       each n in article[0].story
