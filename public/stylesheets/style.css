@@ -399,7 +399,7 @@ ul {
 }
 
 #fb-share,
-#tw-share {
+#tw-share a {
   display: inline-block;
   font-size: 28px;
   margin: 10px 15px;
