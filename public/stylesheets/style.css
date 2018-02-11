@@ -368,6 +368,11 @@ ul {
   right: 0;
 }
 
+.news-header h3,
+.blog-header h3 {
+  visibility: visible;
+}
+
 .news-article q {
   font-style: italic;
   margin: 15px 10px;
@@ -536,6 +541,11 @@ footer p {
   .article-preview:hover > h2,
   .blog-preview:hover > h2 {
     opacity: 0;
+  }
+
+  .news-header h3,
+  .blog-header h3 {
+    visibility: hidden;
   }
 
   footer > div,

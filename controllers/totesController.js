@@ -37,7 +37,7 @@ exports.getSingleArticle = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(article => {
     console.log(article);
-    res.render('headline', { title: 'articles | totes pets', article });
+    res.render('newsarticle', { title: 'articles | totes pets', article });
   })
   .catch(err => {
     next(err);
