@@ -386,6 +386,27 @@ ul {
   margin-left: 40px;
 }
 
+.news-article figure,
+.blog-post figure {
+  display: block;
+  height: auto;
+  margin: 20px auto;
+  width: 50%;
+}
+
+figure > img {
+  height: auto;
+  width: 100%;
+}
+
+figcaption {
+  height: auto;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px;
+}
+
 .article-close {
   color: #E0763D;
   margin-top: 50px;
