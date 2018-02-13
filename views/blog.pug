@@ -22,4 +22,6 @@ block content
           a(href=`/blog/${h.quick}`)
             h4= h.headline
           p= h.date
-        p!= h.story[0].text[0]
+        .post-bottom(style=`background-image: url(../images/${h.image})`)
+          .post-inset-preview
+            p!= h.story[0].text[0]

@@ -51,7 +51,8 @@ a,
 p,
 q,
 span,
-li {
+li,
+figcaption {
   font-size: 23px;
 }
 
@@ -439,6 +440,11 @@ figcaption {
   transition: all .7s;
 }
 
+.news-article a,
+.blog-post a {
+  color: blue;
+  text-decoration: underline;
+}
 
 footer {
   color: #fff;
@@ -494,7 +500,8 @@ footer p {
   p,
   q,
   span,
-  li {
+  li,
+  figcaption {
     font-size: 18px;
   }
 
@@ -569,6 +576,14 @@ footer p {
     visibility: hidden;
   }
 
+  .news-article figure,
+  .blog-post figure {
+    display: block;
+    height: auto;
+    margin: 10px auto;
+    width: 80%;
+  }
+
   footer > div,
   footer div:nth-of-type(3) {
     text-align: center;
@@ -600,7 +615,8 @@ footer p {
   p,
   q,
   span,
-  li {
+  li,
+  figcaption {
     font-size: 20px;
   }
 

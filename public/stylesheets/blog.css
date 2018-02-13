@@ -38,13 +38,14 @@
   border-top: 3px solid #F7A375;
   height: auto;
   margin: 15px auto;
-  width: 80%;
+  width: 50%;
 }
 
 .post-top {
   background: #F7A375;
   color: white;
-  height: auto;
+  display: inline-block;
+  height: calc(100% - 20px);
   float: left;
   padding: 10px;
   width: 250px;
@@ -52,4 +53,26 @@
 
 .post-top a {
   color: inherit;
+}
+
+.post-bottom {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  width: calc(100% - 270px);
+}
+
+.post-inset-preview {
+  background: rgba(255, 255, 255, .7);
+  height: calc(100% - 20px);
+  opacity: 0;
+  padding: 10px;
+  transition: all .7s;
+  transition-timing-function: ease-out;
+  width: calc(100% - 20px);
+}
+
+.blog-block:hover .post-inset-preview {
+  opacity: 1;
 }
