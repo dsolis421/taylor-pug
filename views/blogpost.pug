@@ -1,10 +1,11 @@
 extends layout
 
 block metas
-  meta(property="og:url", content=`https://totespets.com/articles/${article[0].quick}`)
+  meta(property="og:url", content=`https://totespets.com/blog/${post[0].quick}`)
   meta(property="og:type", content="article")
-  meta(property="og:title", content=`${article[0].headline}`)
-  meta(property="og:description", content=`${article[0].desc}`)
+  meta(property="og:title", content=`${post[0].headline}`)
+  meta(property="og:description", content=`${post[0].desc}`)
+  meta(property="og:image", content=`https://totespets.com/images/${post[0].image}`)
 
 block links
   link(rel='stylesheet', href='/stylesheets/blogpost.css')
@@ -16,10 +17,10 @@ block content
       h2= post[0].headline
       h4= post[0].author + " | " + post[0].date
       h3 totes blog
-      span#fb-share(data-url=`https://totespets.com/articles/${article[0].quick}`)
+      span#fb-share(data-url=`https://totespets.com/blog/${post[0].quick}`)
         i.fab.fa-facebook-square
       span#tw-share
-        a(href=`https://twitter.com/intent/tweet?text=${article[0].desc}&url=https://totespets.com/articles/${article[0].quick}&via=totespets`)
+        a(href=`https://twitter.com/intent/tweet?text=${post[0].desc}&url=https://totespets.com/blog/${post[0].quick}&via=totespets`)
           i.fab.fa-twitter-square 
   section
     article.blog-post 
