@@ -6,6 +6,7 @@ block metas
   meta(property="og:title", content=`${article[0].headline}`)
   meta(property="og:description", content=`${article[0].desc}`)
   meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
+  meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
 
 block links
   link(rel='stylesheet', href='/stylesheets/newsarticle.css')
