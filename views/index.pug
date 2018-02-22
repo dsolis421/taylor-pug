@@ -1,5 +1,14 @@
 extends layout
 
+block metas
+  meta(property="og:url", content=`https://totespets.com`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content="We're Totes Pets")
+  meta(property="og:description", content="Help find loving, forever homes surrendered and rescued animals | Promote safe and responsible pet ownership")
+  meta(property="og:image", content="https://totespets.com/images/totes_pets_logofull.png")
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content="https://totespets.com/images/totes_pets_logofull.png")  
+
 block content
   include nav.pug
   section.intro 
