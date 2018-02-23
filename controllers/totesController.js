@@ -10,7 +10,7 @@ exports.getAdoption = (req, res) => {
   quotes.aggregate({$sample: {size: 1}}).exec()
   .then(testmnl => {
     console.log(testmnl);
-    res.render('adoption', { title: 'adoption | totes pets', testmnl})
+    res.render('adoption', { title: 'adoption | totes pets', testmnl});
   })
   .catch(err => {
     next(err);
@@ -26,7 +26,7 @@ exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'about us | tot
 exports.getTestimonials = (req, res) => {
   quotes.find({ _id: req.params.id }).exec()
   .then(testmnl => {
-    res.render('stories', { title: 'stories | totes pets', testmnl})
+    res.render('stories', { title: 'stories | totes pets', testmnl});
   })
   .catch(err => {
     next(err);
@@ -47,7 +47,7 @@ exports.getSingleArticle = (req, res) => {
 exports.getArticles = (req, res) => {
   articles.find({ type: "article", show: "y" }).sort({ order: -1 }).exec()
   .then(articles => {
-    res.render('articles', { title: 'articles | totes pets', articles })
+    res.render('articles', { title: 'articles | totes pets', articles });
   })
   .catch(err => {
     next(err);
@@ -57,7 +57,7 @@ exports.getArticles = (req, res) => {
 exports.getBlogPost = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(post => {
-    res.render('blogpost', { title: 'blog | totes pets', post })
+    res.render('blogpost', { title: 'blog | totes pets', post });
   })
   .catch(err => {
     next(err);
@@ -67,7 +67,7 @@ exports.getBlogPost = (req, res) => {
 exports.getBlog = (req, res) => {
   articles.find({ type: "blog", show: "y" }).sort({ order: -1 }).exec()
   .then(posts => {
-    res.render('blog', { title: 'blog | totes pets', posts })
+    res.render('blog', { title: 'blog | totes pets', posts });
   })
   .catch(err => {
     next(err);
