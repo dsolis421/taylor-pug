@@ -48,7 +48,7 @@
   height: calc(100% - 20px);
   float: left;
   padding: 10px;
-  width: 250px;
+  width: 30%;
 }
 
 .post-top a {
@@ -60,7 +60,7 @@
   background-position: center;
   background-size: cover;
   display: inline-block;
-  width: calc(100% - 270px);
+  width: calc(70% - 20px);
 }
 
 .post-inset-preview {
@@ -75,4 +75,17 @@
 
 .blog-block:hover .post-inset-preview {
   opacity: 1;
+}
+
+@media screen and (max-width: 555px) {
+  .blog-block {
+    margin: 10px auto;
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 556px) and (max-width: 1200px) {
+  .blog-block {
+    width: 75%;
+  }
 }

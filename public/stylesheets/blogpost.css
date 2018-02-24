@@ -36,3 +36,11 @@
 .blog-post ul {
   margin-left: 40px;
 }
+
+@media screen and (max-width: 555px) {
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 1200px) {
+
+}
