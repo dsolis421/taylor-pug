@@ -33,4 +33,15 @@ $(document).ready(function() {
     }
     console.log('clicked top nav');
   });
+
+  $('#adoption-process a').mouseenter(function(){
+    $('#adoption-message').html($(this).attr('data-message'));
+    $('#adoption-message').css({'width': 'auto'});
+  });
+
+  $('#adoption-process a').mouseleave(function(){
+    $('#adoption-message').empty();
+    $('#adoption-message').css({'width': '0'});
+  });
+
 });
