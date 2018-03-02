@@ -1,0 +1,27 @@
+.amplify-atx-logo {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+}
+
+.amplify-atx-donate {
+  background: #F7A375;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  margin: 15px auto;
+  text-align: center;
+  width: 200px;
+}
+
+.amplify-atx-donate > a {
+  color: white !important;
+}
+
+.amplify-atx-donate:hover {
+  cursor: pointer;
+}

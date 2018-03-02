@@ -17,6 +17,10 @@ exports.getAdoption = (req, res) => {
   });
 }
 
+exports.getAmplifyATX = (req, res) => {
+  res.render('amplifyatx', { title: 'amplify atx | totes pets'});
+}
+
 exports.getRescuePartners = (req, res) => {
   res.render('rescuepartner', { title: 'partners | totes pets'});
 }

@@ -1,0 +1,52 @@
+extends layout
+
+block metas
+  meta(property="og:url", content=`https://totespets.com/amplifyatx`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content=`Totes Pets Amplify Austin Campaign`)
+  meta(property="og:description", content=`Help us raise $500 for Texas Humane Heroes`)
+  meta(property="og:image", content=`https://totespets.com/images/amplifyaustinday.png`)
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content=`https://totespets.com/images/amplifyaustinday.png`)
+
+block links
+  link(rel='stylesheet', href='/stylesheets/blogpost.css')
+  link(rel='stylesheet', href='/stylesheets/amplifyatx.css')
+
+block content
+  include nav.pug
+  section.intro 
+    .amplify-atx-logo
+      img(src="/images/amplifyaustinday.png")
+    .amplify-atx-donate 
+      a(href="#") I want to help!
+    span#fb-share(data-url=`https://totespets.com/amplifyatx`)
+      i.fab.fa-facebook-square
+    span#tw-share
+      a(href=`https://twitter.com/intent/tweet?text=Help+us+raise+20%24500+for+Texas+Humane+Heroes&url=https://totespets.com/amplifyatx&via=totespets`)
+        i.fab.fa-twitter-square 
+  section
+    article.news-article
+      h2 My Amplify Austin Campaign
+      iframe(width="560", height="315", src="https://www.youtube.com/embed/vH1VEb5ZXoU?rel=0", frameborder="0", allow="autoplay; encrypted-media", allowfullscreen)
+      p I want to tell you about a fundraising effort that I’m kicking off, through Amplify Austin, to help raise money to support the great work that Texas Humane Heroes does for the Central Texas community.  Taking care of these wonderful dogs and cats, and helping them find loving, forever homes.
+      p Those of you that know me know that I’ve been volunteering here for the last several months.  I’ve been taking pictures of the adoptable pets for the website, making sure these dogs and cats have good photos that can be seen online by potential adopters.
+      p I love doing it.  It’s a huge departure from my day to day.  The staff is super friendly.  I get to spend time with some great animals and I get to do my part to help.  This is something that I care deeply about and I get a lot of satisfaction from volunteering my time for a no kill shelter, like Texas Humane Heroes.
+      p If you’d like to help, I’ve created a campaign page online, where you can go and submit donations.  The money you give will help Texas Humane Heroes continue to provide quality pet care, including spay and neuter procedures, microchipping, and preventative care.
+      .amplify-atx-donate 
+        a(href="#") I want to help!
+      p I’m asking you to please consider a donation to help me reach my goal of raising $500 dollars, by the end of March.  If you can only give $10, hey, that’s $10 more that we had yesterday and it will definitely be put to good use.
+      p If you own a dog or cat, think about what you would do if your pet ever found themselves in a shelter.  Because, I guarantee you, somewhere in America there’s dog or cat exactly like the you have, who’s in a shelter, waiting for a chance to go home to a loving family.
+      p Would you pay $10 or $20 to help save your pet?  Your donation will help these special dogs and cats, like Savannah, find that opportunity for a good home.
+      figure
+        img(src='/images/tennis-ball-hero.png')
+        figcaption Savannah
+      .amplify-atx-donate 
+        a(href="#") I want to help!
+      p Amplify Austin day runs from March 1st, at 6 PM, through March 2nd, 6 PM.  During this 24-hour window, non-profits like Texas Humane Heroes have the opportunity to receive additional contributions from local sponsors based on the amount of money donated during that time period.  So, that $10 or $20 donation could become more, if you happen to donate during that time.  And, every little bit helps.
+      p If you’re feeling generous, go to my campaign page and submit your donation.  You can find the link on the totespets Facebook page, Twitter feed, and at totespets.com/amplifyatx.
+      p Thank you, for watching.  Thank you, for supporting me and for all the kind words of encouragement that you’ve sent me regarding the website and photos that I’ve posted online.  Most of all, Thank You, for support Texas Humane Heroes.  You are truly making a difference.
+      .amplify-atx-donate 
+        a(href="#") I want to help!
+      h4 Love you guys!
+      h4.article-close Peace, Love, and Paws.
