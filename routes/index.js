@@ -7,7 +7,8 @@ router.get('/', totesController.getPreviews);
 /*GET adoption page*/
 router.get('/adoption', totesController.getAdoption);
 
-router.get('/amplifyatx', totesController.getAmplifyATX);
+//amplify atx page currently not needed
+//router.get('/amplifyatx', totesController.getAmplifyATX);
 
 /*Get rescue partners page*/
 router.get('/rescuepartner', totesController.getRescuePartners);

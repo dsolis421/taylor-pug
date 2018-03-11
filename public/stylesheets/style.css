@@ -207,8 +207,8 @@ ul {
   margin-bottom: 15px;
 }
 
-.intro .fa-angle-down {
-  color: #F7A375;
+.intro .fa-chevron-circle-down {
+  color: white;
   -webkit-animation: moveAngleDown 2s linear infinite;
   -moz-animation: moveAngleDown 2s linear infinite;
   -o-animation: moveAngleDown 2s linear infinite;
@@ -216,23 +216,26 @@ ul {
 }
 
 @-webkit-keyframes moveAngleDown {
-    from { -webkit-transform: rotateY(0deg); }
-    to   { -webkit-transform: rotateY(180deg); }
+    0% { -webkit-transform: perspective(0px); }
+    50% { -webkit-transform: perspective(20px); }
+    100% { -webkit-transform: perspective(-20px)}
 }
 
 @-moz-keyframes moveAngleDown {
-    from { -moz-transform: rotateY(0deg); }
-    to   { -moz-transform: rotateY(180deg); }
+    0% { -moz-transform: perspective(0px); }
+    50% { -moz-transform: perspective(20px); }
+    100% { -moz-transform: perspective(-20px); }
 }
 
 @-o-keyframes moveAngleDown {
-    from { -o-transform: rotateY(0deg); }
-    to   { -o-transform: rotateY(180deg); }
+    from { -o-transform: rotateX(0deg); }
+    to   { -o-transform: rotateX(180deg); }
 }
 
 @keyframes moveAngleDown {
-    from { transform: rotateY(0deg); }
-    to   { transform: rotateY(180deg); }
+    0% { transform: scale(1); color: white; }
+    50% { transform: scale(1.1); color: #F7A375; }
+    100% { transform: scale(1); color: white; }
 }
 
 .header .detail-anchor {
@@ -291,7 +294,8 @@ ul {
 }
 
 #adoption-process > a,
-#adoption-process > a svg {
+#adoption-process > a svg,
+#adoption-process > span svg {
   color: #E0763D;
   display: inline-block;
   height: auto;
@@ -301,6 +305,10 @@ ul {
 #adoption-process > a:hover svg {
   color: #F7A375;
   transform: scale(1.3);
+}
+
+#adoption-process > span svg {
+  color: #462310;
 }
 
 #adoption-message {
