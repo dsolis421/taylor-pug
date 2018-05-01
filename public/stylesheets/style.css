@@ -577,6 +577,11 @@ footer p {
     width: calc(100% - 30px);
   }
 
+  #adoption-process a,
+  #adoption-process span {
+    font-size: 15px;
+  }
+
   .article-preview,
   .blog-preview {
     background-position: center;
