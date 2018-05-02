@@ -215,6 +215,9 @@ ul {
   animation: moveAngleDown 2s linear infinite;
 }
 
+.fine-print {
+  font-style: italic;
+}
 @-webkit-keyframes moveAngleDown {
     0% { -webkit-transform: perspective(0px); }
     50% { -webkit-transform: perspective(20px); }

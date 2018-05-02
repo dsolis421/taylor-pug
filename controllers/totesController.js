@@ -22,7 +22,7 @@ exports.getAmplifyATX = (req, res) => {
 }
 
 exports.getRescuePartners = (req, res) => {
-  res.render('rescuepartner', { title: 'partners | totes pets'});
+  res.render('rescuepartner', { title: 'rescue partners | totes pets'});
 }
 
 exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'about us | totes pets'});

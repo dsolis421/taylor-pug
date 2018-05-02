@@ -11,7 +11,7 @@ router.get('/adoption', totesController.getAdoption);
 //router.get('/amplifyatx', totesController.getAmplifyATX);
 
 /*Get rescue partners page*/
-router.get('/rescuepartner', totesController.getRescuePartners);
+router.get('/rescue-partner', totesController.getRescuePartners);
 
 router.get('/stories/:id', totesController.getTestimonials);
 

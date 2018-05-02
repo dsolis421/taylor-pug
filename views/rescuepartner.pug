@@ -1,13 +1,48 @@
 extends layout
 
+block metas
+  meta(property="og:url", content=`https://totespets.com/rescue-partner`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content='Totes to the Rescue!')
+  meta(property="og:description", content='How can we help your rescue shelter?')
+  //meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
+  //meta(name="twitter:card", content="summary_large_image")
+  //meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
+
+block links
+  link(rel='stylesheet', href='/stylesheets/newsarticle.css')
+
 block content
   include nav.pug
-  section.header#rescue-partner-header
-    h1 partner
-    h3 How can we help?
+  section.header
+    .news-header
+      h2 Totes to the Rescue!
+      h4 How can we help?
   section
-    p 
-      |We offer our site as a resource to assist with your rescue operation.
-    h2 rescue hosting
-    h2 event promotion
-    h2 fundraising
+    article.news-article
+      p 
+        |Totes Pets provides a variety of volunteer services, through our "Totes to the Rescue" program. We offer these services free of charge to any non-profit animal rescue or shelter. Contact us to discuss how Totes to the Rescue can help promote or raise awareness for your rescue shelter.
+      //
+        h4 Page Hosting
+        p
+          |We give your rescue an online presence. We can create a page that tells your rescue shelter's story, presents your adoptables dogs and cats, and provides contact information to potential adoptors.
+      h4 Storytelling
+      p
+        |The internet is rich with moving stories, every day people doing extraordinary things to save an animal. Pets doing amazing things for humans. 
+        | Our site strives to be informational, educational, and inspirational. We would love to share the amazing things that your rescue organization has witnessed or accomplished. 
+        | Perhaps you have a long stay or special needs animal that you'd like featured on our home page. We'll interview, write, and publish your story on totespets.com, as well as share the story on all of our social media outlets.  
+      h4 Event Promotion
+      p
+        |Events are a great way to gather your communities for a good cause. Whether it's a fundraiser, celebration, or just a good excuse to run a 5k, we want to tell everyone about it.
+        | Totes Pets would love to help with the announcement and promotion of your big events. Combine this with our photography service**, and you have a formula for success.
+      h4 Photography (Central Texas area only)
+      p
+        |You need high quality pictures to help promote your available dogs and cats. We offer onsite photography services** to suit your needs. 
+        |Capturing a pet's personality and showcasing their "good side" is our specialty.
+        | Your organization can use these images to enhance your marketing materials**.
+      p.fine-print 
+        |**Since photography services are performed onsite, in-person, we can only offer this service to rescue organizations located in the Central Texas area.  
+        |Photo sessions and editing are performed free of charge. Images are available for use by the rescue organization for which they are taken, for any marketing purposes. There are no licensing requirements for use of released images. 
+        |All images are watermarked. We ask that you make the watermark visible when using photos for marketing purposes, whenever possible.  
+        |
+      h4 Contact Us 
