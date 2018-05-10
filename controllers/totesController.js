@@ -18,19 +18,19 @@ exports.getAdoption = (req, res) => {
 }
 
 exports.getAmplifyATX = (req, res) => {
-  res.render('amplifyatx', { title: 'amplify atx | totes pets'});
+  res.render('amplifyatx', { title: 'totes pets | amplify atx'});
 }
 
 exports.getRescuePartners = (req, res) => {
-  res.render('rescuepartner', { title: 'rescue partners | totes pets'});
+  res.render('rescuepartner', { title: 'totes pets | rescue partners'});
 }
 
-exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'about us | totes pets'});
+exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'totes pets | about us'});
 
 exports.getTestimonials = (req, res) => {
   quotes.find({ _id: req.params.id }).exec()
   .then(testmnl => {
-    res.render('stories', { title: 'stories | totes pets', testmnl});
+    res.render('stories', { title: 'totes pets | stories', testmnl});
   })
   .catch(err => {
     next(err);
@@ -41,7 +41,7 @@ exports.getSingleArticle = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(article => {
     console.log(article);
-    res.render('newsarticle', { title: 'articles | totes pets', article });
+    res.render('newsarticle', { title: 'totes pets | ' + article[0].headline, article });
   })
   .catch(err => {
     next(err);
@@ -51,7 +51,7 @@ exports.getSingleArticle = (req, res) => {
 exports.getArticles = (req, res) => {
   articles.find({ type: "article", show: "y" }).sort({ order: -1 }).exec()
   .then(articles => {
-    res.render('articles', { title: 'articles | totes pets', articles });
+    res.render('articles', { title: 'totes pets | articles', articles });
   })
   .catch(err => {
     next(err);
@@ -61,7 +61,7 @@ exports.getArticles = (req, res) => {
 exports.getBlogPost = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(post => {
-    res.render('blogpost', { title: 'blog | totes pets', post });
+    res.render('blogpost', { title: 'totes pets | ' + post[0].headline, post });
   })
   .catch(err => {
     next(err);
@@ -71,7 +71,7 @@ exports.getBlogPost = (req, res) => {
 exports.getBlog = (req, res) => {
   articles.find({ type: "blog", show: "y" }).sort({ order: -1 }).exec()
   .then(posts => {
-    res.render('blog', { title: 'blog | totes pets', posts });
+    res.render('blog', { title: 'totes pets | blog', posts });
   })
   .catch(err => {
     next(err);
@@ -101,7 +101,7 @@ exports.getPreviews = (req, res) => {
 }
 
 exports.getPetNameApp = (req, res) => {
-  res.render('petname', { title: 'name | totes pets' });
+  res.render('petname', { title: 'totes pets | pet names' });
 }
 
 exports.getSuggestName = (req, res) => {
@@ -115,7 +115,7 @@ exports.getSuggestName = (req, res) => {
     qualities: { $in: qualityarray }}).exec()
   .then(name => {
     console.log(name);
-    res.render('suggestname', { title: 'name | totes pets', name});
+    res.render('suggestname', { title: 'totes pets | ' + name[0].name, name});
   })
   .catch(err => {
     console.log('getSuggestName: ',err);
