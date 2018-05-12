@@ -44,5 +44,72 @@ block content
         |**Since photography services are performed onsite, in-person, we can only offer this service to rescue organizations located in the Central Texas area.  
         |Photo sessions and editing are performed free of charge. Images are available for use by the rescue organization for which they are taken, for any marketing purposes. There are no licensing requirements for use of released images. 
         |All images are watermarked. We ask that you make the watermark visible when using photos for marketing purposes, whenever possible.  
-        |
-      h4 Contact Us 
+        
+      form#rescuecontactForm(action="https://docs.google.com/forms/d/e/1FAIpQLSeiqv311tAfK_qJbI2oZotwsb_nkGzbYoFQrYMkypuv_TdxZA/formResponse", target="_self", method="POST")
+        fieldset
+          h4 Contact Us
+          p.fine-print We do not sell or distribute contact information to outside parties
+        <!-- Field type: "short" id: "1553629246" -->
+        fieldset
+          legend(for="1553629246") Name 
+            i.fal.fa-asterisk
+          .form-group
+            input#1560045526.form-control(type="text", name="entry.1560045526", required)      
+        <!-- Field type: "short" id: "456685292" -->
+        fieldset
+          legend(for="456685292") Name of Rescue Organization/Shelter 
+            i.fal.fa-asterisk
+          .form-group
+            input#1176579230.form-control(type="text", name="entry.1176579230", required)
+        <!-- Field type: "short" id: "1819156299" -->
+        fieldset
+          legend(for="1819156299") Location - City, State 
+            i.fal.fa-asterisk
+          .form-group
+            input#1858718691.form-control(type="text", name="entry.1858718691", required)
+        <!-- Field type: "short" id: "1612439089" -->
+        fieldset
+          legend(for="1612439089") Email Address 
+            i.fal.fa-asterisk
+          .form-group
+            input#1440955550.form-control(type="email", name="entry.1440955550", required)
+        <!-- Field type: "short" id: "210719125" -->
+        fieldset
+          legend(for="210719125") Phone Number 
+          .form-group
+            input#1295326129.form-control(type="text", name="entry.1295326129")
+        <!-- Field type: "dropdown" id: "1554761659" -->
+        fieldset
+          legend(for="1554761659") Best Way to Contact 
+          .form-group
+            select#1554761659.form-control(name="entry.2142251151", placeholder="Select...")
+              option(value="Email") Email
+              option(value="Phone") Phone
+        <!-- Field type: "dropdown" id: "1497778772" -->
+        fieldset
+          legend(for="1497778772") Type of Request 
+          .form-group
+            select#1497778772.form-control(name="entry.1388519647", placeholder="Select...")
+              option(value="Story Telling / Articles") Story Telling / Articles
+              option(value="Event Promotion") Event Promotion
+              option(value="Photography Services") Photography Services
+              option(value="Other") Other
+        <!-- Field type: "paragraph" id: "171076626" -->
+        fieldset
+          legend(for="171076626") Message 
+            i.fal.fa-asterisk
+          .form-group
+            textarea#2017356482.form-control(name="entry.2017356482", required)      
+        input(type="hidden", name="fvv", value="1")
+        input(type="hidden", name="fbzx", value="149417258417220302")
+        //
+              CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+              This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+              Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+              We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+        input(type="hidden", name="pageHistory", value="0")
+        input.btn.btn-primary(type="submit" value="Submit")
+
+block scripts
+  script(src="/javascripts/rescuecontact.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js", integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=", crossorigin="anonymous")

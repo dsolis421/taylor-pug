@@ -8,7 +8,7 @@ brown: #462310
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp, select,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
@@ -16,7 +16,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+menu, nav, output, option, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -26,7 +26,10 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-body {
+body,
+form,
+input,
+textarea {
   font-family: 'Yantramanav', sans-serif;
   color: #462310;
   background: #fff;
@@ -51,8 +54,13 @@ a,
 p,
 q,
 span,
+legend,
 li,
-figcaption {
+figcaption,
+input,
+select,
+option,
+textarea {
   font-size: 23px;
 }
 
@@ -104,6 +112,35 @@ h5 {
 
 ul {
   padding-left: 20px;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #F7A375;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+textarea {
+  height: 300px;
+  text-indent: 0px;
+}
+
+input,
+textarea {
+  width: 50%;
+}
+
+legend svg.fa-asterisk {
+  font-size: 15px;
+  color: #F7A375;
+}
+
+.btn-primary {
+  background: #F7A375;
+  color: #fff;
+  width: 200px;
 }
 
 .toggle-nav {
@@ -216,7 +253,9 @@ ul {
 }
 
 .fine-print {
+  font-size: 15px;
   font-style: italic;
+  line-height: normal;
 }
 @-webkit-keyframes moveAngleDown {
     0% { -webkit-transform: perspective(0px); }
