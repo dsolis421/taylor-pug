@@ -1,6 +1,7 @@
 /*
 new color scheme
 blue: #5DA4C1
+dark blue:  #234C5C
 orange: #F7A375
 dark orange: #E0763D
 brown: #462310
@@ -244,7 +245,7 @@ legend svg.fa-asterisk {
   margin-bottom: 15px;
 }
 
-.intro .fa-chevron-circle-down {
+.intro .fa-angle-down {
   color: white;
   -webkit-animation: moveAngleDown 2s linear infinite;
   -moz-animation: moveAngleDown 2s linear infinite;
@@ -516,7 +517,7 @@ figcaption {
 
 footer {
   color: #fff;
-  background: #341509;
+  background: #E0763D;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
