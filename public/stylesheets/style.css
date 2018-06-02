@@ -61,7 +61,8 @@ figcaption,
 input,
 select,
 option,
-textarea {
+textarea,
+#formmessage {
   font-size: 23px;
 }
 
@@ -131,6 +132,10 @@ textarea {
 input,
 textarea {
   width: 50%;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
 }
 
 legend svg.fa-asterisk {
@@ -258,6 +263,7 @@ legend svg.fa-asterisk {
   font-style: italic;
   line-height: normal;
 }
+
 @-webkit-keyframes moveAngleDown {
     0% { -webkit-transform: perspective(0px); }
     50% { -webkit-transform: perspective(20px); }
@@ -362,6 +368,10 @@ legend svg.fa-asterisk {
   font-size: 25px;
   font-weight: bold;
   width: 0;
+}
+
+#formmessage {
+  color: #E0763D;
 }
 
 .preview {
