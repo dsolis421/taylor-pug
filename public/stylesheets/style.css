@@ -525,6 +525,11 @@ figcaption {
   color: blue;
 }
 
+.news-article h4,
+.blog-post h4 {
+  width: 50%;
+}
+
 footer {
   color: #fff;
   background: #E0763D;
