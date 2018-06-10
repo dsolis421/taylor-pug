@@ -23,6 +23,8 @@ router.get('/blog', totesController.getBlog);
 
 router.get('/blog/:headline', totesController.getBlogPost);
 
+router.get('/gallery', totesController.getGallery);
+
 router.get('/petname', totesController.getPetNameApp);
 
 router.get('/petname/:type/:gender/:color/:qualities', totesController.getSuggestName);

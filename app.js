@@ -12,6 +12,7 @@ require('./models/articles');
 require('./models/petnames');
 require('./models/rescueorgs');
 require('./models/availpets');
+require('./models/gallery');
 
 var index = require('./routes/index');
 /*var adoption = require('./routes/adoption');

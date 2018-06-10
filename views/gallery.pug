@@ -1,0 +1,44 @@
+extends layout
+
+block metas
+  //meta(property="og:url", content=`https://totespets.com/articles/${article[0].quick}`)
+  //meta(property="og:type", content="article")
+  //meta(property="og:title", content=`${article[0].headline}`)
+  //meta(property="og:description", content=`${article[0].desc}`)
+  //meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
+  //meta(name="twitter:card", content="summary_large_image")
+  //meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
+
+block links
+  link(rel='stylesheet', href='/stylesheets/gallery.css')
+
+block content
+  include nav.pug
+  section.dark-header
+    .news-header
+      h4 Enjoy these pictures of rescue dogs and cats, taken by our volunteer photographers.
+        | These images are used by rescue shelters to help promote their animals.
+        | It's our small way of helping find loving, forever homes for rescue pets.
+      h3 totes gallery
+      span#fb-share(data-url=`https://totespets.com/gallery/`)
+        i.fab.fa-facebook-square
+      span#tw-share
+        a(href=`https://twitter.com/intent/tweet?text=testing&url=https://totespets.com/gallery/`)
+          i.fab.fa-twitter-square
+  section.gallery-section
+    .gallery-nav
+      //stub page number with nav arrows each way
+      i.fal.fa-angle-double-left
+      i.fal.fa-angle-left
+      input.gallery-page-input
+      i.fal.fa-angle-right  
+      i.fal.fa-angle-double-right
+    .gallery-set    
+    .gallery-nav
+      //stub page number with nav arrows each way
+      i.fal.fa-angle-double-left
+      i.fal.fa-angle-left
+      input.gallery-page-input
+      i.fal.fa-angle-right  
+      i.fal.fa-angle-double-right          
+block scripts

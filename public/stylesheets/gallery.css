@@ -1,0 +1,18 @@
+.gallery-section {
+  padding: 1%;
+}
+
+.gallery-nav {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery-nav input {
+  margin: 0 10px;
+  width: 50px;
+}
+
+.gallery-nav .fa-angle-left,
+.gallery-nav .fa-angle-right {
+  margin: 0 10px;
+}

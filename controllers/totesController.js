@@ -4,6 +4,7 @@ const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');
 const petnames = mongoose.model('petnames');
 const rescueorgs = mongoose.model('rescueorgs');
+const gallery = mongoose.model('gallery');
 
 exports.getAdoption = (req, res) => {
   //aggregate can get a random document from mongodb
@@ -72,6 +73,20 @@ exports.getBlog = (req, res) => {
   articles.find({ type: "blog", show: "y" }).sort({ order: -1 }).exec()
   .then(posts => {
     res.render('blog', { title: 'totes pets | blog', posts });
+  })
+  .catch(err => {
+    next(err);
+  });
+}
+
+exports.getGallery = (req, res) => {
+  res.render('gallery', { title: 'totes pets | gallery'});
+}
+
+exports.getGallerySet = (req, res) => {
+  gallery.find({ page: req.params.page, show: "y" }).sort({ order: -1}).exec()
+  .then(galleryset => {
+    res.render('gallery', { title: 'totes pets | gallery', galleryset });
   })
   .catch(err => {
     next(err);
