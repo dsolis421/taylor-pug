@@ -16,3 +16,9 @@
 .gallery-nav .fa-angle-right {
   margin: 0 10px;
 }
+
+.gallery-set img {
+  height: auto;
+  min-width: 200px;
+  max-width: 90%;
+}

@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-
 const gallerySchema = new mongoose.Schema({
   'name' : {
     type: String,

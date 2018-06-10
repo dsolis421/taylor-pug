@@ -33,7 +33,9 @@ block content
       input.gallery-page-input
       i.fal.fa-angle-right  
       i.fal.fa-angle-double-right
-    .gallery-set    
+    .gallery-set
+      each pic in galleryset
+        img(src=`${pic.image}`, alttext=`${pic.name}`)
     .gallery-nav
       //stub page number with nav arrows each way
       i.fal.fa-angle-double-left

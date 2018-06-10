@@ -4,7 +4,7 @@ const quotes = mongoose.model('quotes');
 const articles = mongoose.model('articles');
 const petnames = mongoose.model('petnames');
 const rescueorgs = mongoose.model('rescueorgs');
-const gallery = mongoose.model('gallery');
+const gallerycol = mongoose.model('gallery');
 
 exports.getAdoption = (req, res) => {
   //aggregate can get a random document from mongodb
@@ -80,12 +80,13 @@ exports.getBlog = (req, res) => {
 }
 
 exports.getGallery = (req, res) => {
-  res.render('gallery', { title: 'totes pets | gallery'});
+  res.redirect('/gallery/1');
 }
 
 exports.getGallerySet = (req, res) => {
-  gallery.find({ page: req.params.page, show: "y" }).sort({ order: -1}).exec()
+  gallerycol.find({ show: "y" }).exec()
   .then(galleryset => {
+    console.log(galleryset);
     res.render('gallery', { title: 'totes pets | gallery', galleryset });
   })
   .catch(err => {
