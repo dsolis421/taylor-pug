@@ -1,10 +1,7 @@
-.gallery-section {
-  padding: 1%;
-}
-
 .gallery-nav {
   margin: 0 auto;
   text-align: center;
+  padding: 1%;
 }
 
 .gallery-nav input {
@@ -17,8 +14,14 @@
   margin: 0 10px;
 }
 
+.gallery-set {
+  height: auto;
+}
+
 .gallery-set img {
+  display: block;
   height: auto;
   min-width: 200px;
+  margin: 10px auto;
   max-width: 90%;
 }
