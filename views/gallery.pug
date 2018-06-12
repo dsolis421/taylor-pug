@@ -28,19 +28,32 @@ block content
   section.gallery-section
     .gallery-nav
       //stub page number with nav arrows each way
-      i.fal.fa-angle-double-left
-      i.fal.fa-angle-left
+      .min-gallery-page
+        i.fal.fa-angle-double-left
+      .prev-gallery-page
+        i.fal.fa-angle-left
       input.gallery-page-input
-      i.fal.fa-angle-right  
-      i.fal.fa-angle-double-right
+      p of 
+        span.gallery-max= max[0].page
+      .next-gallery-page
+        i.fal.fa-angle-right  
+      .max-gallery-page
+        i.fal.fa-angle-double-right
     .gallery-set
       each pic in galleryset
         img(src=`${pic.image}`, alttext=`${pic.name}`)
     .gallery-nav
       //stub page number with nav arrows each way
-      i.fal.fa-angle-double-left
-      i.fal.fa-angle-left
+      .min-gallery-page
+        i.fal.fa-angle-double-left
+      .prev-gallery-page
+        i.fal.fa-angle-left
       input.gallery-page-input
-      i.fal.fa-angle-right  
-      i.fal.fa-angle-double-right          
+      p of 
+        span.gallery-max= max[0].page
+      .next-gallery-page
+        i.fal.fa-angle-right  
+      .max-gallery-page
+        i.fal.fa-angle-double-right          
 block scripts
+  script(src="/javascripts/galleryscript.js")

@@ -84,10 +84,24 @@ exports.getGallery = (req, res) => {
 }
 
 exports.getGallerySet = (req, res) => {
-  photos.find({ show: "y" }).sort({ order: -1}).exec()
-  .then(galleryset => {
-    console.log(galleryset);
-    res.render('gallery', { title: 'totes pets | gallery', galleryset });
+  var reqmax = req.params.page;
+  photos.find({ show: "y" }).sort({page:-1}).limit(1).exec()
+  .then(max => {
+    if(reqmax < 1) {
+      res.redirect('/gallery/1');
+    }
+    if(reqmax > max[0].page) {
+      res.redirect('/gallery/' + max[0].page);
+    }
+    if(reqmax > 0 && reqmax <= max[0].page) {
+      photos.find({ page: reqmax, show: "y" }).sort({ order: -1}).exec()
+      .then(galleryset => {
+        res.render('gallery', { title: 'totes pets | gallery', galleryset, max });
+      })
+      .catch(err => {
+        next(err);
+      });
+    }
   })
   .catch(err => {
     next(err);
