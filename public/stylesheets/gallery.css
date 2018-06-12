@@ -35,16 +35,32 @@
   height: auto;
 }
 
-.gallery-set img {
+.gallery-set figure {
   display: block;
   height: auto;
   min-width: 200px;
   margin: 10px auto;
-  max-width: 90%;
+  max-width: 50%;
 }
 
 figcaption a,
 figcaption a:visited {
   color: #F7A375;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 555px) {
+
+  .gallery-set figure {
+    max-width: 75%;
+  }
+
+}
+
+@media screen and (min-width: 556px) and (max-width: 1200) {
+
+  .gallery-set figure {
+    max-width: 90%;
+  }
+
 }
