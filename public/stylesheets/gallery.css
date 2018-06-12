@@ -42,3 +42,9 @@
   margin: 10px auto;
   max-width: 90%;
 }
+
+figcaption a,
+figcaption a:visited {
+  color: #F7A375;
+  margin-left: 10px;
+}

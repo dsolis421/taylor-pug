@@ -1,12 +1,12 @@
 extends layout
 
 block metas
-  //meta(property="og:url", content=`https://totespets.com/articles/${article[0].quick}`)
-  //meta(property="og:type", content="article")
-  //meta(property="og:title", content="Totes Pets Gallery")
-  //meta(property="og:description", content="Enjoy these pictures of rescue dogs and cats, taken by our volunteer photographers")
+  meta(property="og:url", content=`https://totespets.com/gallery/1`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content="Totes Pets Gallery")
+  meta(property="og:description", content="Enjoy these pictures of rescue dogs and cats, taken by our volunteer photographers")
   //meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
-  //meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:card", content="summary_large_image")
   //meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
 
 block links
@@ -20,10 +20,10 @@ block content
         | These images are used by rescue shelters to help promote their animals.
         | It's our small way of helping find loving, forever homes for rescue pets.
       h3 totes gallery
-      span#fb-share(data-url=`https://totespets.com/gallery/`)
+      span#fb-share(data-url=`https://totespets.com/gallery/1`)
         i.fab.fa-facebook-square
       span#tw-share
-        a(href=`https://twitter.com/intent/tweet?text=Our+collection+of+rescued+dogs+and+cats&url=https://totespets.com/gallery/`)
+        a(href=`https://twitter.com/intent/tweet?text=Our+collection+of+rescued+dogs+and+cats&url=https://totespets.com/gallery/1`)
           i.fab.fa-twitter-square
   section.gallery-section
     .gallery-nav
@@ -41,7 +41,11 @@ block content
         i.fal.fa-angle-double-right
     .gallery-set
       each pic in galleryset
-        img(src=`${pic.image}`, alttext=`${pic.name}`)
+        figure
+          img(src=`${pic.image}`, alttext=`${pic.name}`)
+          figcaption= pic.name + ' - ' + pic.shelter + ' '
+            a(href=`https://${pic.website}`, target="_blank")
+              i.fal.fa-globe
     .gallery-nav
       //stub page number with nav arrows each way
       .min-gallery-page

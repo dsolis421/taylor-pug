@@ -321,9 +321,12 @@ legend svg.fa-asterisk {
 }
 
 .featured-content-hero {
-  border-top: 50px solid #5DA4C1;
   border-bottom: 50px solid #5DA4C1;
   padding: 90px 5% 30px 5%;
+}
+
+.featured-content-hero:first-of-type {
+  border-top: 50px solid #5DA4C1;
 }
 
 .featured-content-hero > div {
@@ -333,7 +336,8 @@ legend svg.fa-asterisk {
   width: 100%;
 }
 
-#adoption-process {
+#adoption-process,
+#gallery-links {
   height: auto;
   padding: 20px 0;
 }
@@ -344,14 +348,17 @@ legend svg.fa-asterisk {
 
 #adoption-process > a,
 #adoption-process > a svg,
-#adoption-process > span svg {
+#adoption-process > span svg,
+#gallery-links >a,
+#gallery-links >a svg {
   color: #E0763D;
   display: inline-block;
   height: auto;
   transition: all .3s;
 }
 
-#adoption-process > a:hover svg {
+#adoption-process > a:hover svg,
+#gallery-links > a:hover svg {
   color: #F7A375;
   transform: scale(1.3);
 }
