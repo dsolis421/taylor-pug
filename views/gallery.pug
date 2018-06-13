@@ -8,6 +8,13 @@ block metas
   //meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
   meta(name="twitter:card", content="summary_large_image")
   //meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
+  script(type="text/javascript").
+    if (!('IntersectionObserver' in window)) {
+        var script = document.createElement("script");
+        script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+  script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js")
 
 block links
   link(rel='stylesheet', href='/stylesheets/gallery.css')
@@ -40,7 +47,9 @@ block content
     .gallery-set
       each pic in galleryset
         figure
-          img(src=`${pic.image}`, alttext=`${pic.name}`)
+          img.lozad(data-src=`${pic.image}`, alt=`${pic.image}`)
+          noscript
+            img(src=`${pic.image}`, alt=`${pic.image}`)
           figcaption= pic.name + ' - ' + pic.shelter + ' '
             a(href=`https://${pic.website}`, target="_blank")
               i.fal.fa-globe
@@ -58,3 +67,4 @@ block content
         i.fal.fa-angle-double-right          
 block scripts
   script(src="/javascripts/galleryscript.js")
+    

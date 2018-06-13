@@ -7,12 +7,15 @@ function gotoGalleryPage(value) {
   window.location.href = "/gallery/" + value;
 }
 
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+
 $(document).ready(function() {
   var $patharray = window.location.pathname.split( '/' );
   var $currentpage = $patharray[$patharray.length - 1];
   var $maxgallery = $('.gallery-section .gallery-nav:first-of-type p .gallery-max').html();
 
   setGalleryInput($currentpage);
+  observer.observe();
 
   $('.min-gallery-page').click(function(){
     gotoGalleryPage(1);
