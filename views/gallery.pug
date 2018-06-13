@@ -47,7 +47,7 @@ block content
     .gallery-set
       each pic in galleryset
         figure
-          img.lozad(data-src=`${pic.image}`, alt=`${pic.image}`)
+          img.lozad(data-src=`${pic.image}`, alt=`Loading ${pic.name}`)
           noscript
             img(src=`${pic.image}`, alt=`${pic.image}`)
           figcaption= pic.name + ' - ' + pic.shelter + ' '
@@ -67,4 +67,3 @@ block content
         i.fal.fa-angle-double-right          
 block scripts
   script(src="/javascripts/galleryscript.js")
-    

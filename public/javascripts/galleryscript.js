@@ -7,7 +7,7 @@ function gotoGalleryPage(value) {
   window.location.href = "/gallery/" + value;
 }
 
-const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+//const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 
 $(document).ready(function() {
   var $patharray = window.location.pathname.split( '/' );
@@ -15,7 +15,15 @@ $(document).ready(function() {
   var $maxgallery = $('.gallery-section .gallery-nav:first-of-type p .gallery-max').html();
 
   setGalleryInput($currentpage);
-  observer.observe();
+
+  lozad('.lozad', {
+      load: function(el) {
+          el.src = el.dataset.src;
+          el.onload = function() {
+              el.classList.add('fade')
+          }
+      }
+  }).observe();
 
   $('.min-gallery-page').click(function(){
     gotoGalleryPage(1);

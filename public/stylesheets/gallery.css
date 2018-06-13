@@ -43,6 +43,20 @@
   max-width: 50%;
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 figcaption a,
 figcaption a:visited {
   color: #F7A375;
