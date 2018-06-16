@@ -30,7 +30,7 @@ block content
           h3= previews.a[0].headline
         p!= previews.a[0].story[0].text[0]
         a(href=`/articles/${previews.a[0].quick}`) Read Article
-  .featured-content-hero
+  section.featured-content-hero
     #adoption-header
       h3 Thinking about adopting a pet?    
       p If you're new to pet adoption, we have a helpful series of articles to help guide you through the adoption process.
@@ -54,11 +54,21 @@ block content
       a(href='/articles/living-your-best-pet-life', data-message="Living Your Best Pet Life")
         i.fal.fa-heart.fa-2x
     #adoption-message
-  .featured-content-hero
+  section.featured-rescue-partner
+    #rescue-partner-header
+      h3 Totes to the Rescue!
+      p Millions of dogs and cats enter animal shelters every year.
+        | Caring for rescued pets and finding suitables adoptors is a cause we share.
+        | Let us help you create meaningful stories and images that connect with potential adoptors.
+        | Our services are free to any non-profit rescue organization.
+    #partner-links
+      a(href='/rescue-partner', data-message="We want to lend a helping hand")
+        i.fal.fa-hands-helping.fa-2x
+  section.featured-content-hero
     #gallery-header
       h3 Totes Gallery    
       p Our content features photos of rescued dogs and cats, taken at the shelters by our volunteer photographers.  
-      p Enjoy a look at these lovable pets, many of whom have found a loving forever home. 
+        | Enjoy a look at these lovable pets, many of whom have found a loving forever home. 
     #gallery-links
       a(href='/gallery/1', data-message="Pictures of rescue shelter dogs and cats")
         i.fal.fa-camera-retro.fa-2x
