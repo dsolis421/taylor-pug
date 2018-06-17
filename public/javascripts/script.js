@@ -18,7 +18,7 @@ $(document).ready(function() {
   $(document).scroll(function(){
     var $scroll = $(document).scrollTop();
     if ($scroll > 50) {
-      $('.toggle-nav').css('background','#E0763D');
+      $('.toggle-nav').css('background','#462310');
     } else if ($scroll == 0) {
       $('.toggle-nav').css('background','none');
     }
@@ -39,9 +39,19 @@ $(document).ready(function() {
     $('#adoption-message').css({'width': 'auto'});
   });
 
-  $('#adoption-process a').mouseleave(function(){
-    $('#adoption-message').empty();
-    $('#adoption-message').css({'width': '0'});
+  $('#partner-links a').mouseenter(function(){
+    $('#partner-message').html($(this).attr('data-message'));
+    $('#partner-message').css({'width': 'auto'});
+  });
+
+  $('#gallery-links a').mouseenter(function(){
+    $('#gallery-message').html($(this).attr('data-message'));
+    $('#gallery-message').css({'width': 'auto'});
+  });
+
+  $('#adoption-process a, #partner-links a, #gallery-links a').mouseleave(function(){
+    $('#adoption-message, #partner-message, #gallery-message').empty();
+    $('#adoption-message, #partner-message, #gallery-message').css({'width': '0'});
   });
 
 });
