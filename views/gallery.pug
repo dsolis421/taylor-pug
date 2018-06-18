@@ -1,13 +1,14 @@
 extends layout
 
 block metas
+  meta(name="keywords", content="totes pets, pet gallery, pets, rescue pets, dogs, cats, totespets, gallery")
   meta(property="og:url", content=`https://totespets.com/gallery/1`)
   meta(property="og:type", content="article")
   meta(property="og:title", content="Totes Pets Gallery")
   meta(property="og:description", content="Enjoy these pictures of rescue dogs and cats, taken by our volunteer photographers")
-  //meta(property="og:image", content=`https://totespets.com/images/${article[0].image}`)
+  meta(property="og:image", content="https://totespets.com/images/totespets_gallery.jpg")
   meta(name="twitter:card", content="summary_large_image")
-  //meta(name="twitter:image:src", content=`https://totespets.com/images/${article[0].image}`)
+  meta(name="twitter:image:src", content="https://totespets.com/images/totespets_gallery.jpg")
   script(type="text/javascript").
     if (!('IntersectionObserver' in window)) {
         var script = document.createElement("script");

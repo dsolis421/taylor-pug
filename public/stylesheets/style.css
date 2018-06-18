@@ -357,21 +357,29 @@ legend svg.fa-asterisk {
   border-bottom: 50px solid #5DA4C1;
 }
 
-.featured-content-hero,
-.featured-rescue-partner {
+.featured-content-hero {
   padding: 90px 5% 30px 5%;
 }
 
 .featured-content-hero > div,
-.featured-rescue-partner > div {
+.featured-gallery > div {
   height: auto;
   margin: 0 auto;
   text-align: center;
 }
 
-.featured-rescue-partner {
-  background: #5DA4C1;
+.featured-gallery {
+  background-image: url('/images/totespets_gallery.jpg');
+  background-position: top;
+  background-size: cover;
   color: #fff;
+}
+
+.featured-gallery > div {
+  background: none;
+  border-radius: 0 0 100% 100%;
+  padding: 90px 5% 30px 5%;
+  transition: all .7s;
 }
 
 #adoption-header,
@@ -431,6 +439,16 @@ legend svg.fa-asterisk {
   font-size: 25px;
   font-weight: bold;
   width: 0;
+}
+
+#gallery-links,
+#gallery-message {
+  opacity: 0;
+  transition: all .7s;
+}
+
+#gallery-links > p {
+  margin-bottom: 20px;
 }
 
 #formmessage {
@@ -704,6 +722,10 @@ footer p {
 
   .preview {
     width: calc(100% - 30px);
+  }
+
+  .featured-gallery > div {
+    border-radius: 0 0 0 0;
   }
 
   #adoption-process a,

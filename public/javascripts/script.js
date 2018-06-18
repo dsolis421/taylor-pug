@@ -1,3 +1,13 @@
+function isinViewport(el) {
+  var elementTop = $(el).offset().top + 200;
+  var elementBottom = elementTop + $(el).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+}
+
 $(document).ready(function() {
 
   $(function() {
@@ -21,6 +31,11 @@ $(document).ready(function() {
       $('.toggle-nav').css('background','#462310');
     } else if ($scroll == 0) {
       $('.toggle-nav').css('background','none');
+    }
+
+    if(isinViewport($('.featured-gallery'))) {
+      $('.featured-gallery > div').css({"background":"rgba(0,0,0,.5)"});
+      $('#gallery-links, #gallery-message').css({"opacity":"1"});
     }
   });
 
