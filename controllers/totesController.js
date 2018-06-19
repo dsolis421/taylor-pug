@@ -41,7 +41,6 @@ exports.getTestimonials = (req, res) => {
 exports.getSingleArticle = (req, res) => {
   articles.find({ quick: req.params.headline }).exec()
   .then(article => {
-    console.log(article);
     res.render('newsarticle', { title: 'totes pets | ' + article[0].headline, article });
   })
   .catch(err => {
@@ -112,15 +111,12 @@ exports.getPreviews = (req, res) => {
   var previews = {a: undefined, b: undefined};
   articles.find({ type: "article", show: "y" }).sort({ order: -1}).limit(1).exec()
   .then(apreview => {
-    console.log(apreview);
     previews.a = apreview;
   })
   .then(() => {
     articles.find({ type: "blog", show: "y" }).sort({ order: -1}).limit(1).exec()
     .then(bpreview => {
-      console.log(bpreview)
       previews.b = bpreview;
-      console.log(previews);
       res.render('index',{ title: 'totes pets', previews });
     })
     .catch(err => next(err));
@@ -156,10 +152,10 @@ exports.getSuggestName = (req, res) => {
 exports.getRescueOrg = (req, res) => {
   rescueorgs.find({ zip: req.params.zip }).exec()
   .then(shelters => {
-    console.log(shelters);
+    //console.log(shelters);
   })
   .catch(err => {
-    console.log('getRescueOrg: ',err);
+    //console.log('getRescueOrg: ',err);
     next(err);
   });
 }

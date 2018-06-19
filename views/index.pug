@@ -1,6 +1,7 @@
 extends layout
 
 block metas
+  meta(name="keywords", content="totes pets, pets, rescue pets, dogs, cats, totespets, pet adoption, pet articles, animal welfare, rescue volunteer, shelter volunteer")
   meta(property="og:url", content=`https://totespets.com`)
   meta(property="og:type", content="article")
   meta(property="og:title", content="We're Totes Pets")
@@ -25,7 +26,7 @@ block content
       a(href="/petname") Pet Names
   section
     article.article-preview
-      h2.landing-labels articles
+      h2.landing-labels totes articles
       .preview
         a(href=`/articles/${previews.a[0].quick}`)
           h3= previews.a[0].headline
@@ -77,10 +78,12 @@ block content
     #partner-message
   section
     article.blog-preview.clear-fix
-      h2.landing-labels blog
+      h2.landing-labels totes blog
       .preview
         a(href=`/blog/${previews.b[0].quick}`)
           h3= previews.b[0].headline
         p!= previews.b[0].story[0].text[0]
         a(href=`/blog/${previews.b[0].quick}`) Read Blog
+block scripts
+  script(src="/javascripts/script.js")
   
