@@ -684,6 +684,11 @@ footer p {
     line-height: 25px;
   }
 
+  input,
+  textarea {
+    width: 90%;
+  }
+
   .toggle-nav {
     display: block;
     flex: none;
@@ -699,7 +704,7 @@ footer p {
   }
 
   .responsive {
-    background: #E0763D;
+    background: #462310;
   }
 
   .toggle-nav.responsive a {

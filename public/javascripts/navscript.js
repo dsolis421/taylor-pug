@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  $('#top-nav .icon, #top-nav a').click(function(){
+    var x = document.getElementById("top-nav");
+    if (x.className === "toggle-nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "toggle-nav";
+    }
+    console.log('clicked top nav');
+  });
+
   $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -22,16 +32,6 @@ $(document).ready(function() {
     } else if ($scroll == 0) {
       $('.toggle-nav').css('background','none');
     }
-
-    $('#top-nav .icon, #top-nav a').click(function(){
-      var x = document.getElementById("top-nav");
-      if (x.className === "toggle-nav") {
-          x.className += " responsive";
-      } else {
-          x.className = "toggle-nav";
-      }
-      console.log('clicked top nav');
-    });
   });
 
 });
