@@ -8,6 +8,11 @@ function isinViewport(el) {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 }
 
+function displayDataMessage(el, message) {
+  $(el).html(message);
+  $(el).css({'width': 'auto'});
+}
+
 $(document).ready(function() {
 
   $(document).scroll(function(){
@@ -17,19 +22,10 @@ $(document).ready(function() {
     }
   });
 
-  $('#adoption-process a').mouseenter(function(){
-    $('#adoption-message').html($(this).attr('data-message'));
-    $('#adoption-message').css({'width': 'auto'});
-  });
-
-  $('#partner-links a').mouseenter(function(){
-    $('#partner-message').html($(this).attr('data-message'));
-    $('#partner-message').css({'width': 'auto'});
-  });
-
-  $('#gallery-links a').mouseenter(function(){
-    $('#gallery-message').html($(this).attr('data-message'));
-    $('#gallery-message').css({'width': 'auto'});
+  $('#adoption-process a, #partner-links a, #gallery-links a').mouseenter(function(){
+    var enteredElement = $(this).parent().attr('id');
+    var messageElement = '#' + enteredElement.substr(0,enteredElement.indexOf('-')) + '-message';
+    displayDataMessage(messageElement, $(this).attr('data-message'));
   });
 
   $('#adoption-process a, #partner-links a, #gallery-links a').mouseleave(function(){
