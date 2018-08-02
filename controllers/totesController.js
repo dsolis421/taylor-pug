@@ -26,6 +26,10 @@ exports.getRescuePartners = (req, res) => {
   res.render('rescuepartner', { title: 'totes pets | rescue partners'});
 }
 
+exports.getRescueStories = (req, res) => {
+  res.render('rescuestories', { title: 'totes pets | Tell Us Your Rescue Story'});
+}
+
 exports.getAboutUs = (req, res) => res.render('aboutus', {title: 'totes pets | about us'});
 
 exports.getTestimonials = (req, res) => {

@@ -13,6 +13,8 @@ router.get('/adoption', totesController.getAdoption);
 /*Get rescue partners page*/
 router.get('/rescue-partner', totesController.getRescuePartners);
 
+router.get('/rescue-stories', totesController.getRescueStories);
+
 router.get('/stories/:id', totesController.getTestimonials);
 
 router.get('/articles', totesController.getArticles);

@@ -1,0 +1,63 @@
+extends layout
+
+block metas
+  meta(property="og:url", content='https://totespets.com/rescue-stories')
+  meta(property="og:type", content="article")
+  meta(property="og:title", content='Share Your Adoption Story')
+  meta(property="og:description", content='Tell us about that time you saved a furry life!')
+  meta(property="og:image", content='https://totespets.com/images/test.jpg')
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content='https://totespets.com/images/test.jpg')
+
+block links
+  link(rel='stylesheet', href='/stylesheets/rescuestories.css')
+
+block content
+  include nav.pug
+  section.dark-header
+    .rescue-story-header
+      h2 My Rescue Story
+      P Would you be willing to share your thoughts on what it means to rescue, foster, or adopt a pet? We’d love to tell your stories on our website. Your words just might convince someone to adopt or foster a needy rescue pet.
+      span#fb-share(data-url='https://totespets.com/rescue-stories')
+        i.fab.fa-facebook-square
+      span#tw-share
+        a(href=`https://twitter.com/intent/tweet?text=Tell+us+about+that+time+you+saved+a+furry+life!&url=https://totespets.com/rescue-stories&via=totespets`)
+          i.fab.fa-twitter-square
+  section
+    article.news-article
+      form#rescue-story-form(action="https://docs.google.com/forms/d/e/1FAIpQLScHFSzuMz6bIKLqmgM7E-dgZ539h0G8KE7kAUSYlu8npoJUFw/formResponse", target="_self", method="POST")
+        h4 Share Your Story
+        fieldset
+          legend Name
+            i.fal.fa-asterisk
+          .form-group
+            input(type="text", jsname="YPqjbf", autocomplete="off", tabindex="0", aria-label="Name", aria-describedby="i.desc.1266984773 i.err.1266984773", name="entry.1120162405", value="", required, dir="auto", data-initial-dir="auto", data-initial-value="")
+        fieldset
+          legend Where are you from?
+          .form-group
+            input(type="text", jsname="YPqjbf", autocomplete="off", tabindex="0", aria-label="From", aria-describedby="i.desc.700310753 i.err.700310753", name="entry.1485611311", value="", dir="auto", data-initial-dir="auto", data-initial-value="")
+        fieldset
+          legend Email (Optional)
+          .form-group
+            input(type="email", jsname="YPqjbf", autocomplete="off", tabindex="0", aria-label="Email", aria-describedby="i.desc.1664905769 i.err.1664905769", name="entry.1535925517" value="", dir="auto", data-initial-dir="auto", data-initial-value="")
+        #rescue-form-message
+          h4 Not sure what to say?
+          ul
+            li What’s the best part about adopting a dog or cat?
+            li How has adopting a pet changed your life for the better?
+            li Can you describe the joy of providing a loving home to a rescued animal?
+            li What would you say to someone thinking about adopting a pet for the first time?
+        input.btn-primary(type="submit", name="submit", value="Submit")
+        fieldset
+          legend Story
+            i.fal.fa-asterisk
+          .form-group
+            textarea(jsname="YPqjbf", data-rows="1", tabindex="0", aria-label="Story", jscontroller="gZjhIf", jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;", required, name="entry.1652810791", dir="auto", data-initial-dir="auto", data-initial-value="")
+        input(type="hidden", name="fvv", value="1")
+        input(type="hidden", name="draftResponse", value="[null,null,&quot;-3290728963195095600&quot;]")
+        input(type="hidden", name="pageHistory", value="0")
+        input(type="hidden", name="fbzx", value="-3290728963195095600")
+          
+block scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js", integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=", crossorigin="anonymous")
+  script(type="text/javascript", src="/javascripts/rescuestoryscript.js")

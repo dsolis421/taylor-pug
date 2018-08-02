@@ -118,6 +118,10 @@ ul {
   padding-left: 20px;
 }
 
+form {
+  margin-bottom: 30px;
+}
+
 input,
 textarea,
 select {
