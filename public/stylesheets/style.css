@@ -114,7 +114,7 @@ h5 {
   font-weight: bold;
 }
 
-ul {
+ul, ol {
   padding-left: 20px;
 }
 
@@ -548,7 +548,8 @@ legend svg.fa-asterisk {
   margin: 15px 0;
 }
 
-.news-article ul {
+.news-article ul,
+.news-article ol  {
   margin-left: 40px;
 }
 
