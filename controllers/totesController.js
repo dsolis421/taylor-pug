@@ -163,3 +163,7 @@ exports.getRescueOrg = (req, res) => {
     next(err);
   });
 }
+
+exports.getInstagramLinks = (req, res) => {
+  res.render('instagramlinks', { title: 'totes pets | Totes Instagram Links'});
+}

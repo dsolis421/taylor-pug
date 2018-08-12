@@ -15,6 +15,8 @@ router.get('/rescue-partner', totesController.getRescuePartners);
 
 router.get('/rescue-stories', totesController.getRescueStories);
 
+router.get('/instagram', totesController.getInstagramLinks);
+
 router.get('/stories/:id', totesController.getTestimonials);
 
 router.get('/articles', totesController.getArticles);

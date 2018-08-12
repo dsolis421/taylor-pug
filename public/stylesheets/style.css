@@ -623,6 +623,24 @@ figcaption {
   width: 30%;
 }
 
+.instagram-links a:hover,
+.instagram-links a:visited,
+.instagram-links a:focus {
+  border-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.instagram-link-div {
+  background: #F7A375;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+.fa-instagram {
+  margin-right: 10px;
+}
+
 footer {
   color: #fff;
   background: #462310;
