@@ -553,6 +553,11 @@ legend svg.fa-asterisk {
   margin-left: 40px;
 }
 
+.news-article ul > li > span,
+.news-article ol > li > span  {
+  background: #E0763D;
+}
+
 .news-article figure,
 .blog-post figure {
   display: block;
