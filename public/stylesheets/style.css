@@ -118,6 +118,10 @@ ul, ol {
   padding-left: 20px;
 }
 
+li {
+  margin: 10px 0;
+}
+
 form {
   margin-bottom: 30px;
 }
@@ -556,6 +560,8 @@ legend svg.fa-asterisk {
 .news-article ul > li > span,
 .news-article ol > li > span  {
   background: #E0763D;
+  font-weight: bold;
+  padding: 0 5px;
 }
 
 .news-article figure,
