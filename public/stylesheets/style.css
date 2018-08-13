@@ -565,7 +565,7 @@ legend svg.fa-asterisk {
 .news-article ol > li > span  {
   background: #F7A375;
   font-weight: bold;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .news-article figure,
@@ -636,7 +636,7 @@ figcaption {
 
 .news-article h4,
 .blog-post h4 {
-  width: 30%;
+  width: 50%;
 }
 
 .instagram-links a:hover,
@@ -812,7 +812,7 @@ footer p {
 
   .news-article h4,
   .blog-post h4 {
-    width: 50%;
+    width: 75%;
   }
 
   footer > div,
