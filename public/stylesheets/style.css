@@ -193,7 +193,7 @@ legend svg.fa-asterisk {
   border: 1px solid #D4F7EC;
   border-radius: 2px;
   display: none;
-  padding: 12px 10px 10px 10px;
+  padding: 8px 10px 5px 10px;
   width: auto;
 }
 
@@ -647,8 +647,10 @@ figcaption {
 
 .instagram-link-div {
   background: #F7A375;
+  height: 600px;
   margin: 20px auto;
   padding: 5px;
+  width: 600px;
 }
 
 .fa-instagram {
@@ -815,6 +817,14 @@ footer p {
 
   .news-article ul {
     margin-left: 10px;
+  }
+
+  .instagram-link-div {
+    background: #F7A375;
+    height: 95vw;
+    margin: 20px auto;
+    padding: 5px;
+    width: 95%
   }
 
   footer > div,
