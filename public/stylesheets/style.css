@@ -114,7 +114,7 @@ h5 {
   font-weight: bold;
 }
 
-ul, ol {
+ul {
   padding-left: 20px;
 }
 
@@ -382,7 +382,7 @@ legend svg.fa-asterisk {
 
 .featured-gallery {
   background-image: url('/images/totespets_gallery.jpg');
-  background-position: top;
+  background-position: center;
   background-size: cover;
   color: #fff;
 }
@@ -556,12 +556,10 @@ legend svg.fa-asterisk {
   margin: 15px 0;
 }
 
-.news-article ul,
-.news-article ol  {
+.news-article ul {
   margin-left: 40px;
 }
 
-.news-article ul > li > span,
 .news-article ol > li > span  {
   background: #F7A375;
   font-weight: bold;
@@ -813,6 +811,10 @@ footer p {
   .news-article h4,
   .blog-post h4 {
     width: 75%;
+  }
+
+  .news-article ul {
+    margin-left: 10px;
   }
 
   footer > div,
