@@ -9,11 +9,11 @@ var debug = require('debug')('totes:server');
 var http = require('http');
 
 /* mongoose connect*/
-mongoose.Promise = global.Promise;
+/*mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DATABASE, { useMongoClient: true })
   .then(() => console.log("[mongoose] Connected to MongoDB"))
   .catch(err => console.error('[mongoose] FAILED to connect --> ' + err));
-
+*/
 /**
  * Get port from environment and store in Express.
  */

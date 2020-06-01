@@ -1,0 +1,89 @@
+extends layout
+
+block metas
+  meta(name="keywords", content="totes pets, pets, rescue pets, dogs, cats, totespets, pet adoption, pet articles, animal welfare, rescue volunteer, shelter volunteer")
+  meta(property="og:url", content=`https://totespets.com`)
+  meta(property="og:type", content="article")
+  meta(property="og:title", content="We're Totes Pets")
+  meta(property="og:description", content="Help find loving, forever homes for surrendered and rescued animals | Promote safe and responsible pet ownership")
+  meta(property="og:image", content="https://totespets.com/images/totes_pets_logofull.png")
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:image:src", content="https://totespets.com/images/totes_pets_logofull.png")  
+
+block content
+  include nav.pug
+  section.intro 
+    .logo-container
+    h4 Help find loving, forever homes for surrendered and rescued animals
+    h4 Promote safe and responsible pet ownership
+    span scroll down
+    i.fal.fa-angle-down.fa-3x
+  //
+    section.pet-name-gen
+      h3 Pet Name Suggesterator
+      p Having trouble finding the perfect name for your newly adopted pet?
+      P Let us help
+      a(href="/petname") Pet Names
+  section
+    article.article-preview
+      h2.landing-labels totes articles
+      .preview
+        a(href=`/articles/${previews.a[0].quick}`)
+          h3= previews.a[0].headline
+        p!= previews.a[0].story[0].text[0]
+        a(href=`/articles/${previews.a[0].quick}`) Read Article
+  section.featured-content-hero
+    #adoption-header
+      h3 Thinking about adopting a pet?    
+      p If you're new to pet adoption, we have a helpful series of articles to help guide you through the adoption process.
+    #adoption-process
+      a(href='/articles/adopting-a-pet-intro', data-message="Introduction")
+        i.fal.fa-bookmark.fa-2x
+      span
+        i.fal.fa-long-arrow-right.fa-2x
+      a(href='/articles/choosing-a-pet', data-message="Choosing a Pet")  
+        i.fal.fa-paw.fa-2x  
+      span
+        i.fal.fa-long-arrow-right.fa-2x
+      a(href='/articles/the-adoption-process', data-message="The Adoption Process")  
+        i.fal.fa-file-edit.fa-2x
+      span
+        i.fal.fa-long-arrow-right.fa-2x
+      a(href='/articles/bringing-your-pet-home', data-message="Bring Your Pet Home")
+        i.fal.fa-home.fa-2x           
+      span
+        i.fal.fa-long-arrow-right.fa-2x
+      a(href='/articles/living-your-best-pet-life', data-message="Living Your Best Pet Life")
+        i.fal.fa-heart.fa-2x
+    #adoption-message
+  section.featured-gallery
+    #gallery-header
+      h3 totes gallery     
+      #gallery-links
+        p Our content features photos of rescued dogs and cats, taken at the shelters by our volunteer photographers.  
+          | Enjoy a look at these lovable pets, many of whom have found a loving forever home.
+        a(href='/gallery/1', data-message="Show me cute rescue pets")
+          i.fal.fa-camera-retro.fa-2x
+      #gallery-message
+  section.featured-content-hero
+    #rescue-partner-header
+      h3 Totes to the Rescue!
+      p Millions of dogs and cats enter animal shelters every year. 
+        | Caring for rescued pets and finding suitables adoptors is a cause we share. 
+        | Let us help you create meaningful stories and images that connect with potential adoptors. 
+        | Our services are free to any non-profit rescue organization.
+    #partner-links
+      a(href='/rescue-partner', data-message="Let's clear the shelters")
+        i.fal.fa-hands-helping.fa-2x
+    #partner-message
+  section
+    article.blog-preview.clear-fix
+      h2.landing-labels totes blog
+      .preview
+        a(href=`/blog/${previews.b[0].quick}`)
+          h3= previews.b[0].headline
+        p!= previews.b[0].story[0].text[0]
+        a(href=`/blog/${previews.b[0].quick}`) Read Blog
+block scripts
+  script(src="/javascripts/script.js")
+  

@@ -2,8 +2,15 @@ var express = require('express');
 const router = express.Router();
 const totesController = require('../controllers/totesController');
 
+/*GET temp home page */
+router.get('/', (req, res) => {
+    res.render('index',{ title: 'totes pets'});
+  }
+);
+
 /* GET home page. */
-router.get('/', totesController.getPreviews);
+//router.get('/', totesController.getPreviews);
+
 /*GET adoption page*/
 router.get('/adoption', totesController.getAdoption);
 
